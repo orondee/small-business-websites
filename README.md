@@ -1,12 +1,14 @@
 # GreenLine Lawn Care
 
+**[View the live website](https://orondee.github.io/greenline-lawn-care/)**
+
 A responsive, one-page website for a fictional neighborhood lawn-care company. This beginner-friendly portfolio project is built with plain HTML and CSS and runs locally without setup or paid services.
 
 > **Portfolio sample:** GreenLine Lawn Care and its contact details are fictional. The contact form is a visual demo and does not send or store submissions.
 
 ## Preview
 
-Open [index.html](index.html) in a browser to view the site locally.
+The live website is published with GitHub Pages: [orondee.github.io/greenline-lawn-care](https://orondee.github.io/greenline-lawn-care/).
 
 ## Features
 
