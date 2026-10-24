@@ -1,171 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- This lets mobile browsers use the real device width. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GreenLine Lawn Care is a fictional lawn-care portfolio project with a friendly neighborhood feel.">
-  <title>GreenLine Lawn Care | A little greener, every day</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A student web design portfolio featuring responsive small-business website demos.">
+<title>Small Business Website Portfolio</title>
+<style>
+:root{color-scheme:light;--ink:#19372c;--muted:#5f7168;--green:#246347;--cream:#f6f7f0;--line:#dfe7dc}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1080px,88%);margin:auto}.top{padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:800;letter-spacing:-.4px}.tag{font-size:.82rem;color:var(--muted)}.hero{padding:72px 0 54px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.75rem;font-weight:800;color:var(--green)}h1,h2,h3,p{margin-top:0}h1{max-width:780px;margin-bottom:18px;font:400 clamp(2.8rem,7vw,5.3rem)/1.03 Georgia,serif;letter-spacing:-2px}h1 span{color:var(--green)}.lead{max-width:640px;color:var(--muted);font-size:1.08rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:22px 0 76px}.card{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:white}.visual{min-height:170px;padding:26px;display:flex;align-items:flex-end;background:linear-gradient(130deg,#dcebd9,#a9cfb1);color:#17432d}.visual.clean{background:linear-gradient(130deg,#e1f5ed,#b9ddd2);color:#176b68}.visual-mark{font:400 2.2rem Georgia,serif}.card-body{padding:25px}.card h2{margin-bottom:8px;font:400 1.8rem Georgia,serif}.card p{color:var(--muted);font-size:.94rem}.features{font-size:.84rem;color:var(--muted);margin:14px 0 22px}.button{display:inline-block;padding:12px 17px;background:var(--green);color:white;border-radius:6px;font-weight:700;font-size:.9rem}.button:hover{background:#153f2c}.button.clean{background:#176b68}.foot{border-top:1px solid var(--line);padding:22px 0 35px;color:var(--muted);font-size:.82rem}.disclaimer{padding:14px 16px;border-left:3px solid #93b49a;background:#edf2e8;color:#42584a;font-size:.88rem}@media(max-width:650px){.top{align-items:flex-start;flex-direction:column}.hero{padding-top:45px}.grid{grid-template-columns:1fr}.visual{min-height:130px}h1{letter-spacing:-1px}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="GreenLine Lawn Care home">
-      <span class="brand-mark" aria-hidden="true">G</span>
-      <span>GreenLine <small>Lawn Care</small></span>
-    </a>
-
-    <!-- The menu stays visible on phones so every section remains easy to reach. -->
-    <nav aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Your neighborhood, a little greener</p>
-        <h1 id="hero-title">A lawn you love<br>coming home to.</h1>
-        <p class="hero-description">Thoughtful lawn care that gives you more time to enjoy your outdoor space. Friendly service, tidy results, no fuss.</p>
-        <div class="hero-actions">
-          <a class="button button-light" href="#contact">Get a free estimate <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#services">Explore our services <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-note">
-          <span class="note-icon" aria-hidden="true">✳</span>
-          <span><strong>Good neighbors. Great lawns.</strong><br>Locally cared for since 2018</span>
-        </div>
-      </div>
-
-      <!-- Decorative CSS landscape; hidden from screen readers because it is not content. -->
-      <div class="hero-art" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="cloud cloud-one"></div>
-        <div class="cloud cloud-two"></div>
-        <div class="hill hill-back"></div>
-        <div class="hill hill-front"></div>
-        <div class="house">
-          <div class="roof"></div>
-          <div class="house-body">
-            <div class="window window-one"></div>
-            <div class="window window-two"></div>
-            <div class="door"></div>
-          </div>
-        </div>
-        <div class="tree tree-one"><i></i><b></b></div>
-        <div class="tree tree-two"><i></i><b></b></div>
-        <div class="flower flower-one">✿</div>
-        <div class="flower flower-two">✿</div>
-        <div class="flower flower-three">✿</div>
-        <div class="art-caption"><span>01 / 03</span><span>The GreenLine difference</span><span class="caption-line"></span></div>
-      </div>
-    </section>
-
-    <section class="intro-strip" aria-label="Our approach">
-      <p><span aria-hidden="true">✳</span> A little care goes a long way.</p>
-      <p>Reliable visits <i aria-hidden="true">•</i> Clear pricing <i aria-hidden="true">•</i> Happier weekends</p>
-    </section>
-
-    <section class="section services" id="services" aria-labelledby="services-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">What we can do for you</p>
-          <h2 id="services-title">Care for every corner.</h2>
-        </div>
-        <p>From the first spring trim to the last leaf of fall, we keep things looking their best.</p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-icon icon-mow" aria-hidden="true"><span>〰</span></div>
-          <p class="card-number">01 / The essential</p>
-          <h3>Lawn mowing</h3>
-          <p>Neat, even cuts and crisp edges that keep your yard looking fresh all season.</p>
-          <a href="#contact">Ask about lawn mowing <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="service-card">
-          <div class="service-icon icon-garden" aria-hidden="true"><span>✿</span></div>
-          <p class="card-number">02 / The refresh</p>
-          <h3>Garden tidy-up</h3>
-          <p>Weeding, bed cleanup, and a little extra attention where your garden needs it.</p>
-          <a href="#contact">Ask about garden tidy-up <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="service-card">
-          <div class="service-icon icon-leaf" aria-hidden="true"><span>↗</span></div>
-          <p class="card-number">03 / The finishing touch</p>
-          <h3>Seasonal cleanups</h3>
-          <p>Leaf clearing and seasonal prep to help your outdoor space feel cared for.</p>
-          <a href="#contact">Ask about seasonal cleanups <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="about-art" aria-hidden="true">
-        <div class="about-sun"></div>
-        <div class="about-hill"></div>
-        <div class="about-sprout">✳</div>
-        <span class="about-stamp">Grow<br>good<br>things</span>
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow">A small team with a lot of heart</p>
-        <h2 id="about-title">We believe a good lawn is about more than grass.</h2>
-        <p>It’s where the kids run barefoot, where neighbors stop to say hello, and where you finally get to sit down after a long week. We’re here to make that space feel a little more like yours.</p>
-        <p>GreenLine is a fictional neighborhood lawn-care company created as a web-development portfolio sample. Our friendly, reliable approach is part of the concept.</p>
-        <a class="text-link dark-link" href="#contact">Let’s make a plan <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-copy">
-        <p class="eyebrow">Your next weekend, reclaimed</p>
-        <h2 id="contact-title">Let’s talk about<br>your yard.</h2>
-        <p>Tell us what you have in mind. We’ll follow up with a friendly, no-pressure estimate.</p>
-        <div class="contact-details">
-          <div>
-            <span class="detail-icon" aria-hidden="true">✉</span>
-            <span><small>Email</small><a href="mailto:hello@example.com">hello@example.com</a></span>
-          </div>
-          <div>
-            <span class="detail-icon" aria-hidden="true">⌕</span>
-            <span><small>Phone</small><a href="tel:+15550140123">(555) 014-0123</a></span>
-          </div>
-          <div>
-            <span class="detail-icon" aria-hidden="true">⌖</span>
-            <span><small>Where we work</small><span>Maplewood &amp; nearby</span></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-card">
-        <span class="contact-card-kicker">Let’s get started</span>
-        <span class="contact-spark" aria-hidden="true">✳</span>
-        <h3>Have a question<br>or a project in mind?</h3>
-        <p>Use the demo form to see the layout, or email us directly. The form does not send or store messages.</p>
-        <!-- This demo form is front-end only: no server receives the message. -->
-        <form class="contact-form" action="#contact" method="get">
-          <label for="visitor-name">Your name</label>
-          <input id="visitor-name" name="name" type="text" placeholder="e.g. Jordan Lee" autocomplete="name" required>
-          <label for="visitor-email">Email address</label>
-          <input id="visitor-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-          <label for="visitor-message">What can we help with?</label>
-          <textarea id="visitor-message" name="message" rows="3" placeholder="Tell us a little about your yard" required></textarea>
-          <button class="button button-green" type="submit">Preview demo form <span aria-hidden="true">↗</span></button>
-        </form>
-        <a class="direct-email" href="mailto:hello@example.com?subject=GreenLine%20Lawn%20Care%20estimate">Or email GreenLine directly</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <a class="brand footer-brand" href="#home">
-      <span class="brand-mark" aria-hidden="true">G</span>
-      <span>GreenLine <small>Lawn Care</small></span>
-    </a>
-    <p>Made with care for a greener neighborhood.</p>
-    <span>© 2026 GreenLine Lawn Care</span>
-  </footer>
+<header class="top wrap"><a class="brand" href="./">Small Business Website Portfolio</a><span class="tag">Student web design · HTML &amp; CSS</span></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">Selected website demos</p><h1>Simple websites for <span>small businesses.</span></h1><p class="lead">Explore these sample websites built to demonstrate clean layouts, clear service information, and responsive design for desktop and mobile.</p><p class="disclaimer">These are fictional portfolio projects. Business details are examples only; contact forms and services are not connected to real businesses.</p></section>
+<section class="grid" aria-label="Website projects">
+<article class="card"><div class="visual"><span class="visual-mark">GreenLine / Lawn Care</span></div><div class="card-body"><h2>GreenLine Lawn Care</h2><p>A welcoming lawn-care concept with a custom CSS landscape, service cards, company story, and contact section.</p><p class="features">Green and cream palette · Responsive layout · CSS illustration</p><a class="button" href="./greenline-lawn-care/">View GreenLine demo ↗</a></div></article>
+<article class="card"><div class="visual clean"><span class="visual-mark">BrightSide / Home Cleaning</span></div><div class="card-body"><h2>BrightSide Home Cleaning</h2><p>A fresh cleaning-service concept with a mint color palette, service options, and a simple brand illustration.</p><p class="features">Teal and mint palette · Responsive cards · CSS illustration</p><a class="button clean" href="./brightside-cleaning/">View BrightSide demo ↗</a></div></article>
+</section>
+</main>
+<footer class="foot"><div class="wrap">Student portfolio sample · Built with HTML and CSS · No real business is represented.</div></footer>
 </body>
 </html>
