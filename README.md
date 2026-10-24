@@ -13,18 +13,18 @@ A beginner-friendly portfolio of responsive, fictional small-business website de
 ## Projects
 
 ### GreenLine Lawn Care
-A neighborhood lawn-care concept with a custom CSS landscape, service cards, an about section, and a contact layout.
+A neighborhood lawn-care concept with deep greens, a hand-built landscape illustration, service details, and a clearly labeled sample contact layout.
 
 Files: `greenline-lawn-care/index.html` and `greenline-lawn-care/styles.css`.
 
 ### BrightSide Home Cleaning
-A home-cleaning concept with a mint and teal palette, service cards, responsive layout, and a CSS illustration.
+A home-cleaning concept with warm terracotta, ink-blue details, an illustrated cleaning bottle, and a different editorial layout.
 
 Files: `brightside-cleaning/index.html` and `brightside-cleaning/styles.css`.
 
 ## Important demo notes
 
-Both businesses are fictional. Contact details, where shown, are placeholders. The GreenLine form is a visual demonstration only; it does not send or store messages. No actual lawn-care or cleaning services are offered through these pages.
+Both businesses are fictional portfolio concepts. Contact details and service descriptions are examples only. The GreenLine form is a visual sample and does not send or store messages. BrightSide has no booking system. No actual lawn-care or cleaning services are offered through these pages.
 
 ## Built with
 
