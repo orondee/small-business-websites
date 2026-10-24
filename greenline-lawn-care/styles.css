@@ -223,3 +223,7 @@ nav a,.nav-contact,.direct-email,.service-card a{transition:color .2s ease,borde
 @media(max-width:900px){.concept-details{padding-right:8%;padding-left:8%}}
 @media(max-width:650px){.concept-details{align-items:flex-start;flex-direction:column;gap:8px;padding:22px 7%}.service-card:hover{transform:translateY(-2px)}}
 @media(prefers-reduced-motion:reduce){.service-photo{transition:none}.service-card:hover .service-photo{transform:none}}
+
+
+/* GreenLine keeps its typography practical and confident. */
+h1,h2,.intro-strip p:first-child,.service-card h3,.contact-card h3{font-family:"Manrope","Aptos","Segoe UI",sans-serif;font-weight:700;letter-spacing:-.045em}
