@@ -172,3 +172,8 @@ h2 { margin-bottom: 0; color: var(--green-950); font-family: Georgia, "Times New
 .form-demo-note{color:#77867a;font-size:9px;line-height:1.5}
 .contact-form button{cursor:default}
 @media(max-width:650px){.demo-banner{padding:9px 5%;font-size:9px}.contact-card{box-shadow:5px 5px 0 #e9eee4}}
+
+
+/* Real photography adds context while the original CSS landscape keeps the brand custom. */
+.service-photo{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin:0 0 18px;border-radius:3px;background:var(--green-100)}
+@media(max-width:650px){.service-photo{aspect-ratio:16/8;margin-bottom:15px}}
