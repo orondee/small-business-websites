@@ -232,3 +232,11 @@ h1,h2,.intro-strip p:first-child,.service-card h3,.contact-card h3{font-family:"
 /* Keep the front-end-only sample response clear and readable after submission. */
 .form-confirmation{margin:8px 0 0;padding:12px 14px;border-left:3px solid #34734e;background:#e9f0e7;color:#123b2a;font-size:12px;font-weight:700;line-height:1.6}
 .form-confirmation[hidden]{display:none}
+
+
+/* Give the GreenLine mobile header breathing room: identity first, navigation below. */
+@media(max-width:650px){
+  .site-header{height:auto;min-height:70px;flex-wrap:wrap;justify-content:flex-start;gap:10px;padding:12px 6%}
+  .site-header nav{width:100%;justify-content:space-between;gap:8px;font-size:12px}
+  .site-header .nav-contact{padding:8px 10px}
+}
