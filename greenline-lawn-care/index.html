@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="demo-banner">Portfolio concept · GreenLine is a fictional business. Contact details and services are examples only.</div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="GreenLine Lawn Care home">
       <span class="brand-mark" aria-hidden="true">G</span>
@@ -35,7 +36,7 @@
         </div>
         <div class="hero-note">
           <span class="note-icon" aria-hidden="true">✳</span>
-          <span><strong>Good neighbors. Great lawns.</strong><br>Locally cared for since 2018</span>
+          <span><strong>Good neighbors. Great lawns.</strong><br>A sample concept for neighborhood yards</span>
         </div>
       </div>
 
@@ -143,16 +144,17 @@
         <span class="contact-card-kicker">Let’s get started</span>
         <span class="contact-spark" aria-hidden="true">✳</span>
         <h3>Have a question<br>or a project in mind?</h3>
-        <p>Use the demo form to see the layout, or email us directly. The form does not send or store messages.</p>
+        <p>This sample layout shows how an estimate form could look. It is not connected to a real inbox, and messages are not sent or stored.</p>
         <!-- This demo form is front-end only: no server receives the message. -->
-        <form class="contact-form" action="#contact" method="get">
+        <form class="contact-form" id="demo-form">
           <label for="visitor-name">Your name</label>
           <input id="visitor-name" name="name" type="text" placeholder="e.g. Jordan Lee" autocomplete="name" required>
           <label for="visitor-email">Email address</label>
           <input id="visitor-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
           <label for="visitor-message">What can we help with?</label>
           <textarea id="visitor-message" name="message" rows="3" placeholder="Tell us a little about your yard" required></textarea>
-          <button class="button button-green" type="submit">Preview demo form <span aria-hidden="true">↗</span></button>
+          <button class="button button-green" type="button" aria-describedby="form-demo-note">Demo form only</button>
+          <small id="form-demo-note" class="form-demo-note">This sample form does not send or save messages.</small>
         </form>
         <a class="direct-email" href="mailto:hello@example.com?subject=GreenLine%20Lawn%20Care%20estimate">Or email GreenLine directly</a>
       </div>
