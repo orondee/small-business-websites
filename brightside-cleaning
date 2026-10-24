@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BrightSide Home Cleaning is a fictional cleaning business website demo.">
+  <title>BrightSide Home Cleaning | A Fresh Start</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#home">BrightSide<span>.</span></a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">A FRESHER HOME STARTS HERE</p>
+        <h1>Come home to<br><span>clean and calm.</span></h1>
+        <p class="intro">
+          A clean home makes room for what matters.
+          Explore our simple home-cleaning services
+          designed to make everyday life easier.
+        </p>
+        <a class="button" href="#services">Explore our services</a>
+        <p class="note">A fictional business created for a web design portfolio.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="plant plant-one"></div>
+        <div class="plant plant-two"></div>
+        <div class="bottle">
+          <div class="bottle-cap"></div>
+          <div class="bottle-label">FRESH<br>HOME</div>
+        </div>
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>A little help goes a long way.</h2>
+        <p>Choose the type of clean that fits your space.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Standard Cleaning</h3>
+          <p>Everyday cleaning for kitchens, bathrooms,
+          bedrooms, and shared spaces.</p>
+        </article>
+
+        <article class="service-card featured">
+          <div class="service-icon">02</div>
+          <h3>Deep Cleaning</h3>
+          <p>Extra attention to those often-overlooked
+          areas that need a little more care.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">03</div>
+          <h3>Move-In Cleaning</h3>
+          <p>A fresh start for an empty home before
+          you settle in or after you move out.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-mark">B<span>.</span></div>
+      <div>
+        <p class="eyebrow">A SIMPLER KIND OF CLEAN</p>
+        <h2>More time for the things you love.</h2>
+        <p>
+          BrightSide is a fictional home-cleaning brand built
+          around a simple idea: your space should feel
+          comfortable, welcoming, and ready for real life.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="eyebrow">READY FOR A FRESH START?</p>
+      <h2>Let's make home feel even better.</h2>
+      <p>This is a portfolio demonstration. No real cleaning
+      services are offered through this page.</p>
+      <a class="button button-light" href="#home">Back to top ↑</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#home">BrightSide<span>.</span></a>
+    <p>Fictional business · Student web design portfolio</p>
+  </footer>
+
+</body>
+</html>
