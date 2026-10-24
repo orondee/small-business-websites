@@ -227,3 +227,8 @@ nav a,.nav-contact,.direct-email,.service-card a{transition:color .2s ease,borde
 
 /* GreenLine keeps its typography practical and confident. */
 h1,h2,.intro-strip p:first-child,.service-card h3,.contact-card h3{font-family:"Manrope","Aptos","Segoe UI",sans-serif;font-weight:700;letter-spacing:-.045em}
+
+
+/* Keep the front-end-only sample response clear and readable after submission. */
+.form-confirmation{margin:8px 0 0;padding:12px 14px;border-left:3px solid #34734e;background:#e9f0e7;color:#123b2a;font-size:12px;font-weight:700;line-height:1.6}
+.form-confirmation[hidden]{display:none}
