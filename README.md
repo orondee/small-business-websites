@@ -33,3 +33,8 @@ Both businesses are fictional portfolio concepts. Contact details and service de
 - GitHub Pages
 
 No JavaScript, paid services, build tools, or third-party dependencies are required.
+
+
+## Photography and image use
+
+The pages combine original CSS illustrations with photographs delivered by the Unsplash image CDN. The photos are embedded from Unsplash image URLs rather than copied into this repository; they therefore require an internet connection and the external image URLs to remain available. Review the [Unsplash License](https://unsplash.com/license) before reusing these photos in another project. The business examples remain fictional.
