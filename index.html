@@ -18,6 +18,7 @@
     .approach{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;padding:40px 0 68px;border-top:1px solid var(--line)}.approach h2{margin:0;font:400 clamp(2rem,4vw,3.2rem)/1 var(--serif);letter-spacing:-.04em}.approach-list{display:grid;grid-template-columns:1fr 1fr;gap:24px}.approach-item{padding-top:10px;border-top:1px solid var(--line)}.approach-item b{display:block;margin-bottom:7px;font-size:.87rem}.approach-item p{margin:0;color:var(--muted);font-size:.82rem}
     footer{display:flex;justify-content:space-between;gap:18px;padding:20px 0 28px;border-top:1px solid var(--ink);color:var(--muted);font-size:.76rem}.demo-note{max-width:470px}
     @media(max-width:720px){.intro{grid-template-columns:1fr;gap:27px;padding:53px 0 38px}.intro h1{font-size:clamp(3.5rem,15vw,6rem)}.projects{grid-template-columns:1fr;gap:17px}.project:nth-child(2){margin-top:0}.preview{min-height:230px}.approach{grid-template-columns:1fr;gap:25px}.masthead{align-items:flex-start;flex-direction:column;gap:4px}.approach-list{gap:16px}.section-label{font-size:.65rem}}@media(max-width:430px){.shell{width:90%}.preview{min-height:205px}.clean-preview:before{right:9%;width:115px;height:155px}.clean-preview:after{right:calc(9% + 34px)}.approach-list{grid-template-columns:1fr}footer{flex-direction:column;gap:6px}}
+    .project-photo{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;margin:17px 0 18px;border:1px solid var(--line)}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
@@ -50,6 +51,7 @@
           <div class="project-meta"><span>PROJECT 01</span><span>Service business</span></div>
           <h2>GreenLine Lawn Care</h2>
           <p>A neighborhood lawn-care concept with a deep green palette, hand-built landscape illustration, and practical service and contact sections.</p>
+          <img class="project-photo" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80" alt="Freshly maintained green lawn beside a home" loading="lazy" decoding="async">
           <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
           <a class="project-link" href="./greenline-lawn-care/">Explore the demo <span aria-hidden="true">↗</span></a>
         </div>
@@ -65,6 +67,7 @@
           <div class="project-meta"><span>PROJECT 02</span><span>Home services</span></div>
           <h2>BrightSide Home Cleaning</h2>
           <p>A warmer, more editorial cleaning concept using soft terracotta, ink-blue details, and a simple product illustration rather than the lawn-care look.</p>
+          <img class="project-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Bright, calm contemporary living space" loading="lazy" decoding="async">
           <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
           <a class="project-link" href="./brightside-cleaning/">Explore the demo <span aria-hidden="true">↗</span></a>
         </div>
