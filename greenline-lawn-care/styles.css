@@ -177,3 +177,27 @@ h2 { margin-bottom: 0; color: var(--green-950); font-family: Georgia, "Times New
 /* Real photography adds context while the original CSS landscape keeps the brand custom. */
 .service-photo{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin:0 0 18px;border-radius:3px;background:var(--green-100)}
 @media(max-width:650px){.service-photo{aspect-ratio:16/8;margin-bottom:15px}}
+
+/* Gentle motion keeps the illustrations lively without distracting from the page. */
+@keyframes greenline-sun-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes greenline-cloud-drift {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 12px 0; }
+}
+@keyframes greenline-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-art .sun { animation: greenline-sun-drift 7s ease-in-out infinite; }
+.hero-art .cloud-one { animation: greenline-cloud-drift 9s ease-in-out infinite; }
+.hero-art .cloud-two { animation: greenline-cloud-drift 11s ease-in-out -3s infinite; }
+.service-card { animation: greenline-rise .65s both; }
+.service-card:nth-child(2) { animation-delay: .12s; }
+.service-card:nth-child(3) { animation-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-art .sun, .hero-art .cloud-one, .hero-art .cloud-two,
+  .service-card { animation: none !important; }
+}
