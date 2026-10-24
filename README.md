@@ -1,40 +1,69 @@
 # Small Business Website Portfolio
 
-**[Open the portfolio homepage](https://orondee.github.io/small-business-websites/)**
+**[Open the live portfolio](https://orondee.github.io/small-business-websites/)**
 
-A beginner-friendly portfolio of responsive, fictional small-business website demos built with plain HTML and CSS.
+A beginner-friendly portfolio with two responsive website concepts for fictional small businesses. The projects use plain HTML and CSS, plus a small JavaScript interaction on the GreenLine demo form.
 
-## View the demos
+## View the sites
 
-- **[Portfolio homepage](https://orondee.github.io/small-business-websites/)**
-- **[GreenLine Lawn Care](https://orondee.github.io/small-business-websites/greenline-lawn-care/)**
-- **[BrightSide Home Cleaning](https://orondee.github.io/small-business-websites/brightside-cleaning/)**
+- [Portfolio homepage](https://orondee.github.io/small-business-websites/)
+- [GreenLine Lawn Care](https://orondee.github.io/small-business-websites/greenline-lawn-care/)
+- [BrightSide Home Cleaning](https://orondee.github.io/small-business-websites/brightside-cleaning/)
 
-## Projects
+## Important: these are demos
 
-### GreenLine Lawn Care
-A neighborhood lawn-care concept with deep greens, a hand-built landscape illustration, service details, and a clearly labeled sample contact layout.
+GreenLine and BrightSide are fictional portfolio concepts, not real companies or client work. Names, contact details, service descriptions, locations, and response times are examples.
 
-Files: `greenline-lawn-care/index.html` and `greenline-lawn-care/styles.css`.
+The GreenLine form only displays a sample confirmation in the browser. It does not send or store messages. Do not enter real personal information. BrightSide has no working booking or contact form.
 
-### BrightSide Home Cleaning
-A home-cleaning concept with warm terracotta, ink-blue details, an illustrated cleaning bottle, and a different editorial layout.
+## Project map
 
-Files: `brightside-cleaning/index.html` and `brightside-cleaning/styles.css`.
+| File or folder | What it contains |
+| --- | --- |
+| `index.html` | Portfolio homepage and project summaries. Its small homepage stylesheet is in the `<style>` section of this file. |
+| `assets/lawn-scene.svg` | Lawn illustration shown on the portfolio homepage. |
+| `assets/sunlit-room.svg` | Room illustration shown on the portfolio homepage. |
+| `greenline-lawn-care/index.html` | GreenLine page content, image URLs, and sample-form interaction. |
+| `greenline-lawn-care/styles.css` | GreenLine layout, colors, typography, transitions, and responsive rules. |
+| `brightside-cleaning/index.html` | BrightSide page content and image URLs. |
+| `brightside-cleaning/styles.css` | BrightSide layout, colors, typography, animations, and responsive rules. |
 
-## Important demo notes
+The two project pages use Manrope for GreenLine and DM Sans with DM Serif Display for BrightSide. Service photos are requested from the Unsplash image CDN. Google Fonts and the photos need an internet connection; system-font fallbacks are included.
 
-Both businesses are fictional portfolio concepts. Contact details and service descriptions are examples only. The GreenLine form is a visual sample and does not send or store messages. BrightSide has no booking system. No actual lawn-care or cleaning services are offered through these pages.
+## Make a change
 
-## Built with
+For a quick edit on GitHub, open a file, select the pencil icon, make the change, then commit it to the repository. To work on a copy, download the repository ZIP from GitHub and open the folder in a code editor.
 
-- HTML
-- CSS
-- GitHub Pages
+- Change headings, paragraphs, links, and image descriptions in the relevant `index.html`.
+- Change colors, spacing, fonts, layouts, and motion in the matching `styles.css`.
+- To replace a photo, change its `src` URL and write an accurate `alt` description. Check that you have the right to use the replacement image.
+- The portfolio homepage drawings are the two SVG files listed above. The unused draft images have been removed.
 
-No JavaScript, paid services, build tools, or third-party dependencies are required.
+## Preview on your computer
 
+These are static files, so there is no package install or build step. You can open the top-level `index.html` in a browser. For a local web address, open a terminal in the project folder and run:
 
-## Photography and image use
+```text
+py -m http.server 8000
+```
 
-The pages combine original CSS illustrations with photographs delivered by the Unsplash image CDN. The photos are embedded from Unsplash image URLs rather than copied into this repository; they therefore require an internet connection and the external image URLs to remain available. Review the [Unsplash License](https://unsplash.com/license) before reusing these photos in another project. The business examples remain fictional.
+Then visit [http://localhost:8000](http://localhost:8000). If the `py` command is not available, try `python -m http.server 8000` or open `index.html` directly.
+
+## Check your edits
+
+Before sharing a change:
+
+1. Open each demo from the portfolio homepage.
+2. Use the navigation and check that each section link goes to the right place.
+3. Confirm the photos load and their descriptions match what is shown.
+4. Check the layout at phone and desktop widths.
+5. Try GreenLine's form with made-up details; confirm that the demo message appears and no real message is sent.
+6. If you change motion, keep the reduced-motion rules in place.
+
+## Publish changes
+
+GitHub Pages already publishes this repository. When a change is committed to the published branch, GitHub starts a Pages build and deployment. Check the repository's **Actions** tab for a successful `pages build and deployment` run; the live site can take a short time to update. A hard refresh can help if your browser is still showing a cached version.
+
+## Photos and reuse
+
+The service photos are loaded from Unsplash rather than stored in this repository. Read the [Unsplash License](https://unsplash.com/license) before reusing them elsewhere. This repository does not include a general code license; ask the owner before reusing its code or original illustrations.
