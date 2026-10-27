@@ -24,8 +24,8 @@
       <span>GreenLine <small>Lawn Care</small></span>
     </a>
 
-    <!-- The menu stays visible on phones so every section remains easy to reach. -->
-    <nav aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="greenline-navigation">Menu</button>
+    <nav id="greenline-navigation" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
@@ -88,7 +88,7 @@
 
       <div class="service-grid">
         <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1400&q=88" alt="Fresh green lawn in bright afternoon sunlight" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Fresh green lawn in bright afternoon sunlight" loading="lazy" decoding="async">
           <div class="service-icon icon-mow" aria-hidden="true"><span>〰</span></div>
           <p class="card-number">01 / The essential</p>
           <h3>Lawn mowing</h3>
@@ -96,7 +96,7 @@
           <a href="#contact">Ask about lawn mowing <span aria-hidden="true">↗</span></a>
         </article>
         <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=88" alt="Fresh potting soil and gardening tools ready for a garden bed" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Fresh potting soil and gardening tools ready for a garden bed" loading="lazy" decoding="async">
           <div class="service-icon icon-garden" aria-hidden="true"><span>✿</span></div>
           <p class="card-number">02 / The refresh</p>
           <h3>Garden tidy-up</h3>
@@ -104,7 +104,7 @@
           <a href="#contact">Ask about garden tidy-up <span aria-hidden="true">↗</span></a>
         </article>
         <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=1400&q=88" alt="Autumn leaves scattered across a green lawn" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Autumn leaves scattered across a green lawn" loading="lazy" decoding="async">
           <div class="service-icon icon-leaf" aria-hidden="true"><span>↗</span></div>
           <p class="card-number">03 / The finishing touch</p>
           <h3>Seasonal cleanups</h3>
@@ -116,7 +116,7 @@
 
     <section class="concept-details" aria-label="Example business details">
       <span>Example business details</span>
-      <p>A real service-area list, visit schedule, and typical reply time would go here. Photos are illustrative stock images and do not depict work by a real business.</p>
+      <p>A real version would confirm its service area, visit schedule, and typical reply time before launch. These details remain illustrative, and the photos are stock images.</p>
       <a href="#contact">Ask a question <span aria-hidden="true">↗</span></a>
     </section>
 
@@ -163,13 +163,17 @@
         <h3>Have a question<br>or a project in mind?</h3>
         <p>This sample layout shows how an estimate form could look. It is not connected to a real inbox, and messages are not sent or stored.</p>
         <!-- This demo form is front-end only: no server receives the message. -->
-        <form class="contact-form" id="demo-form">
+        <form class="contact-form" id="demo-form" novalidate>
+          <p class="form-error-summary" id="form-error-summary" role="alert" tabindex="-1" hidden>Please check the highlighted fields and try again.</p>
           <label for="visitor-name">Your name</label>
-          <input id="visitor-name" name="name" type="text" placeholder="e.g. Jordan Lee" autocomplete="name" required>
+          <input id="visitor-name" name="name" type="text" autocomplete="name" aria-describedby="visitor-name-error" required>
+          <small class="field-error" id="visitor-name-error"></small>
           <label for="visitor-email">Email address</label>
-          <input id="visitor-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <input id="visitor-email" name="email" type="email" autocomplete="email" aria-describedby="visitor-email-error" required>
+          <small class="field-error" id="visitor-email-error"></small>
           <label for="visitor-message">What can we help with?</label>
-          <textarea id="visitor-message" name="message" rows="3" placeholder="Tell us a little about your yard" required></textarea>
+          <textarea id="visitor-message" name="message" rows="3" aria-describedby="visitor-message-error" required></textarea>
+          <small class="field-error" id="visitor-message-error"></small>
           <button class="button button-green" type="submit" aria-describedby="form-demo-note">Preview sample request</button>
           <p class="form-confirmation" id="form-confirmation" role="status" aria-live="polite" hidden></p>
           <small id="form-demo-note" class="form-demo-note">This sample form does not send or save messages.</small>
@@ -180,19 +184,61 @@
   </main>
 
   <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="../../">Portfolio home</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
     <a class="brand footer-brand" href="#home">
       <span class="brand-mark" aria-hidden="true">G</span>
       <span>GreenLine <small>Lawn Care</small></span>
     </a>
     <p>Made with care for a greener neighborhood.</p>
-    <span>© 2026 GreenLine Lawn Care</span>
+    <span>© <time data-current-year datetime="2026">2026</time> GreenLine Lawn Care</span>
     <span>Photography via <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
   </footer>
 <script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector("#greenline-navigation");
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+    navigation.classList.toggle("is-open", !expanded);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
+      navigation.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.focus();
+    }
+  });
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("is-open");
+    }
+  });
+  document.querySelector("[data-current-year]").textContent = String(new Date().getFullYear());
   const demoForm = document.querySelector("#demo-form");
   const confirmation = document.querySelector("#form-confirmation");
+  const summary = document.querySelector("#form-error-summary");
+  const fields = [
+    { input: document.querySelector("#visitor-name"), error: document.querySelector("#visitor-name-error"), message: "Enter your name." },
+    { input: document.querySelector("#visitor-email"), error: document.querySelector("#visitor-email-error"), message: "Enter a valid email address." },
+    { input: document.querySelector("#visitor-message"), error: document.querySelector("#visitor-message-error"), message: "Add a short message." }
+  ];
+  fields.forEach(({ input, error }) => input.addEventListener("input", () => {
+    input.removeAttribute("aria-invalid"); error.textContent = "";
+    if (fields.every(({ input: field }) => !field.getAttribute("aria-invalid"))) summary.hidden = true;
+  }));
   demoForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    confirmation.hidden = true;
+    summary.hidden = true;
+    let hasError = false;
+    fields.forEach(({ input, error, message }) => {
+      const invalid = !input.value.trim() || !input.validity.valid;
+      input.setAttribute("aria-invalid", String(invalid));
+      error.textContent = invalid ? message : "";
+      hasError ||= invalid;
+    });
+    if (hasError) { summary.hidden = false; summary.focus(); return; }
     confirmation.hidden = false;
     confirmation.textContent = "Sample complete. This portfolio demo did not send or store your information.";
     demoForm.reset();
