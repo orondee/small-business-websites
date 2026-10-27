@@ -67,3 +67,22 @@ GitHub Pages already publishes this repository. When a change is committed to th
 ## Photos and reuse
 
 The service photos are loaded from Unsplash rather than stored in this repository. Read the [Unsplash License](https://unsplash.com/license) before reusing them elsewhere. This repository does not include a general code license; ask the owner before reusing its code or original illustrations.
+
+
+### Not found page
+
+GitHub Pages serves the root `404.html` for unknown paths. Its links use the published project path so they work from nested addresses too.
+
+
+## Quick manual review
+
+After a change, open the portfolio and both sample pages at desktop and phone widths. Check that:
+
+- The mobile menu opens, closes after a link is chosen, and exposes its state to assistive technology.
+- Images load, stay within their cards, and have meaningful alternative text.
+- Footer links and page-section links reach the intended destinations.
+- The GreenLine sample form shows field errors for incomplete entries and a confirmation for valid sample data. It must never send or store a message.
+- The custom not-found page links back to the portfolio and both samples.
+- The portfolio disclaimer remains visible and sample businesses are not presented as real clients.
+
+The BrightSide contact details are intentionally illustrative and are not provided as real business contacts.
