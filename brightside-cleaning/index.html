@@ -19,8 +19,9 @@
   <div class="portfolio-banner">Portfolio concept · BrightSide is fictional. Service details are examples; photos are illustrative stock images, not BrightSide work.</div>
   <header class="header">
     <a class="logo" href="#home">BrightSide<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#about">Our idea</a><a href="#contact">About this concept</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="brightside-navigation">Menu</button>
+    <nav id="brightside-navigation" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#about">About the concept</a><a href="#contact">Demo details</a>
     </nav>
   </header>
   <main>
@@ -46,19 +47,19 @@
       </div>
       <div class="service-grid">
         <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88" alt="A dog relaxing in a bright, freshly cleaned living room" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="875" alt="A dog relaxing in a bright, freshly cleaned living room" loading="lazy" decoding="async">
           <div class="service-icon" aria-hidden="true">01</div>
           <h3>Standard cleaning</h3>
           <p>Everyday attention for kitchens, bathrooms, bedrooms, and shared spaces.</p>
         </article>
         <article class="service-card featured">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=88" alt="A clean, bright bathroom with a glass shower and white vanity" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="875" alt="A clean, bright bathroom with a glass shower and white vanity" loading="lazy" decoding="async">
           <div class="service-icon" aria-hidden="true">02</div>
           <h3>Deep cleaning</h3>
           <p>Extra time for the often-overlooked corners and surfaces that need more care.</p>
         </article>
         <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=88" alt="A comfortable bedroom with fresh bedding and natural light" loading="lazy" decoding="async">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="875" alt="A comfortable bedroom with fresh bedding and natural light" loading="lazy" decoding="async">
           <div class="service-icon" aria-hidden="true">03</div>
           <h3>Move-in cleaning</h3>
           <p>A fresh start for an empty home before you settle in or after a move.</p>
@@ -67,7 +68,7 @@
     </section>
     <section class="concept-details" aria-label="Example business details">
       <span>EXAMPLE BUSINESS DETAILS</span>
-      <p>A real service area, booking hours, and typical reply time would be listed here. Photos are illustrative stock images and do not depict work by a real business.</p>
+      <p>A real version would confirm its service area, booking hours, and usual reply time before launch. These details are illustrative, and the photos are stock images.</p>
     </section>
     <section class="about section" id="about" aria-labelledby="about-title">
       <div class="about-mark" aria-hidden="true">B<span>.</span></div>
@@ -85,9 +86,33 @@
     </section>
   </main>
   <footer class="footer">
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="../../">Portfolio home</a><a href="#services">Services</a><a href="#contact">Demo details</a></nav>
     <a class="logo" href="#home">BrightSide<span>.</span></a>
-    <p>Fictional business · Website design portfolio</p>
+    <p>Fictional business · Website design portfolio · © <time data-current-year datetime="2026">2026</time></p>
     <span>Photography via <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
   </footer>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector("#brightside-navigation");
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+    navigation.classList.toggle("is-open", !expanded);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
+      navigation.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.focus();
+    }
+  });
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("is-open");
+    }
+  });
+  document.querySelector("[data-current-year]").textContent = String(new Date().getFullYear());
+</script>
 </body>
 </html>
