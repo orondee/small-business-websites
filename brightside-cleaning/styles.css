@@ -722,3 +722,17 @@ body {
     line-height:1.5
   }
 }
+
+/* Accessible mobile navigation and comfortable keyboard targets. */
+.menu-toggle { display:none; padding:9px 13px; border:1px solid var(--line); background:var(--white); color:var(--ink); font:600 .8rem/1.2 Arial, sans-serif; cursor:pointer }
+.header nav a { min-height:40px }
+.footer { flex-wrap:wrap }
+.footer-nav { display:flex; flex-wrap:wrap; gap:16px }
+.footer-nav a { text-decoration:underline; text-underline-offset:3px }
+@media (max-width:650px) {
+  .header { position:relative; flex-wrap:wrap; justify-content:space-between; gap:12px }
+  .menu-toggle { display:inline-flex }
+  .header nav { display:none; width:100%; flex-direction:column; align-items:flex-start; gap:0; padding:5px 0 9px }
+  .header nav.is-open { display:flex }
+  .header nav a { padding:9px 0 }
+}
