@@ -1339,3 +1339,107 @@ h1,h2,.intro-strip p:first-child,.service-card h3,.contact-card h3 {
 .field-error { display:block; min-height:1.2em; color:#a4372d; font-size:12px }
 .form-error-summary { padding:10px 12px; border-left:3px solid #a4372d; color:#7b251d; background:#fff1ed; font-size:13px }
 input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color:#a4372d }
+
+
+/* Wise-inspired GreenLine refresh: sage canvas, ink typography and lime actions. */
+:root {
+  --green-950:#0e0f0c;
+  --green-900:#163300;
+  --green-800:#235b3e;
+  --green-700:#2ead4b;
+  --green-100:#e2f6d5;
+  --cream:#e8ebe6;
+  --ink:#0e0f0c;
+  --muted:#5f645e;
+  --yellow:#9fe870;
+}
+body { color:var(--ink); background:var(--cream); font-family:Inter,Manrope,system-ui,-apple-system,"Segoe UI",sans-serif; }
+.demo-banner { color:#454745; background:var(--cream); }
+.site-header { position:relative; min-height:76px; height:auto; padding:12px max(6%,calc((100% - 1240px)/2)); background:#fff; }
+.brand { color:var(--ink); }
+.brand-mark { color:var(--ink); background:var(--green-100); border-radius:12px; }
+.brand small { color:#686d67; }
+.site-header nav { color:var(--ink); font-weight:650; }
+.site-header nav a:hover,.text-link:hover,.service-card a:hover,.direct-email:hover { color:#327b27; }
+.nav-contact { padding:12px 20px; border:0; border-radius:24px; color:var(--ink); background:var(--yellow); }
+.nav-contact:hover { background:#cdffad; }
+.hero { min-height:560px; grid-template-columns:1fr 1fr; color:var(--ink); background:var(--cream); }
+.hero-copy { padding:68px clamp(32px,7vw,108px); }
+.hero .eyebrow { color:#454745; }
+.eyebrow-dot { background:#2ead4b; }
+h1 { max-width:650px; margin-bottom:24px; font-family:Inter,Manrope,system-ui,sans-serif; font-size:clamp(48px,7.1vw,96px); font-weight:900; line-height:.88; letter-spacing:-.075em; }
+.hero-description { color:#454745; font-size:16px; line-height:1.55; }
+.button { min-height:52px; padding:12px 24px; border-radius:24px; font-size:15px; font-weight:700; }
+.button-light,.button-green { color:#0e0f0c; background:#9fe870; }
+.button-light:hover,.button-green:hover { background:#cdffad; }
+.text-link { color:#163300; font-size:14px; }
+.hero-note { color:#5e635d; font-size:13px; }
+.hero-note strong { color:var(--ink); font-size:14px; }
+.note-icon { border-color:#c5edab; color:#163300; background:#e2f6d5; }
+.hero-art { min-height:560px; border-radius:24px; background:#c5edab; }
+.intro-strip { margin:0 auto; padding:18px max(6%,calc((100% - 1240px)/2)); border:0; background:#fff; }
+.intro-strip p:first-child { color:var(--ink); font-family:Inter,system-ui,sans-serif; font-size:18px; font-weight:700; }
+.intro-strip p:first-child span { color:#2ead4b; }
+.intro-strip p:last-child { color:#454745; font-size:13px; }
+.section { padding:84px max(6%,calc((100% - 1240px)/2)); }
+.services { background:#fff; }
+.eyebrow { color:#454745; }
+h2 { color:var(--ink); font-family:Inter,system-ui,sans-serif; font-size:clamp(34px,4.4vw,56px); font-weight:850; line-height:1; letter-spacing:-.065em; }
+.section-heading > p,.contact-copy > p:not(.eyebrow) { color:#454745; font-size:15px; line-height:1.65; }
+.service-grid { gap:18px; }
+.service-card { overflow:hidden; min-height:300px; padding:24px; border:0; border-radius:24px; background:var(--cream); }
+.service-card:hover { box-shadow:none; transform:translateY(-3px); }
+.service-card h3 { color:var(--ink); font-size:24px; font-weight:750; letter-spacing:-.05em; }
+.service-card > p:not(.card-number) { color:#454745; font-size:14px; line-height:1.6; }
+.service-card a { color:#163300; font-size:14px; font-weight:700; }
+.service-photo { border-radius:16px; }
+.card-number { color:#5e635d; }
+.about { background:#fff; }
+.about-art { min-height:440px; margin:26px; border-radius:24px; background:#c5edab; }
+.about-copy { padding:72px clamp(32px,8vw,112px); }
+.about-copy h2 { font-size:clamp(36px,4.5vw,58px); }
+.about-copy > p:not(.eyebrow) { color:#454745; font-size:15px; line-height:1.7; }
+.dark-link { color:#163300; }
+.concept-details { padding:27px max(6%,calc((100% - 1240px)/2)); border:0; background:#e2f6d5; }
+.concept-details>span { color:#163300; }
+.concept-details p { color:#454745; font-size:14px; }
+.concept-details a { color:#163300; font-size:14px; font-weight:700; }
+.contact { background:var(--cream); }
+.contact-details > div { color:var(--ink); font-size:14px; }
+.detail-icon { color:#163300; background:#e2f6d5; }
+.contact-card { padding:36px; border:0; border-radius:24px; background:#fff; box-shadow:none; }
+.contact-card-kicker { color:#454745; font-size:11px; }
+.contact-card h3 { color:var(--ink); font-size:32px; font-weight:800; letter-spacing:-.05em; }
+.contact-card p { color:#454745; font-size:14px; }
+.contact-form label { color:var(--ink); font-size:14px; font-weight:600; }
+.contact-form input,.contact-form textarea { min-height:48px; padding:12px 16px; border:1px solid var(--ink); border-radius:12px; background:#fff; color:var(--ink); font:16px/1.5 Inter,system-ui,sans-serif; }
+.contact-form .button { width:100%; margin-top:8px; }
+.form-demo-note,.contact-card > small { color:#5e635d; font-size:11px; }
+.direct-email { color:#163300; font-weight:650; }
+.form-confirmation { border-color:#2ead4b; background:#e2f6d5; color:#163300; }
+.site-footer { min-height:110px; padding:26px max(6%,calc((100% - 1240px)/2)); border:0; color:#e8ebe6; background:#0e0f0c; font-size:12px; }
+.footer-brand,.footer-brand small { color:#e8ebe6; }
+.footer-brand .brand-mark { color:#0e0f0c; background:#9fe870; }
+.footer-nav a,.site-footer a { color:#e8ebe6; }
+:focus-visible { outline:3px solid #2ead4b; outline-offset:4px; }
+
+@media (max-width:900px) {
+  .hero { grid-template-columns:1fr 1fr; }
+  .hero-copy { padding:54px 7%; }
+  .section { padding-right:7%; padding-left:7%; }
+}
+@media (max-width:650px) {
+  .site-header { padding:12px 6%; }
+  .site-header nav { background:#fff; }
+  .hero { grid-template-columns:1fr; }
+  .hero-copy { padding:56px 7% 42px; }
+  h1 { font-size:clamp(48px,13vw,72px); }
+  .hero-art { min-height:350px; margin:0 5% 18px; border-radius:20px; }
+  .intro-strip { padding:18px 7%; }
+  .section { padding:64px 7%; }
+  .service-card { border-radius:20px; }
+  .about-art { min-height:280px; margin:18px 18px 0; border-radius:20px; }
+  .about-copy { padding:48px 7%; }
+  .contact-card { padding:28px 22px; border-radius:20px; }
+  .site-footer { padding:24px 7%; }
+}
