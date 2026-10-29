@@ -736,3 +736,35 @@ body {
   .header nav.is-open { display:flex }
   .header nav a { padding:9px 0 }
 }
+
+
+/* Even reading rhythm, generous photography and gentle interactions. */
+.photo-notes { padding:72px max(6%,calc((100% - 1240px)/2)); background:#e8ebe6; }
+.photo-notes-heading { max-width:700px; margin:0 auto 28px; }
+.photo-notes-heading h2 { margin:0; }
+.photo-notes-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; max-width:1240px; margin:0 auto; }
+.photo-notes figure { overflow:hidden; margin:0; border-radius:24px; background:#fff; }
+.photo-notes img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease; }
+.photo-notes figure:hover img { transform:scale(1.025); filter:saturate(1.06); }
+.photo-notes figcaption { padding:15px 20px; color:#454745; font-size:14px; line-height:1.5; }
+h1,h2,h3 { text-wrap:balance; }
+p { text-wrap:pretty; }
+.service-card > p:not(.card-number),.about-copy > p:not(.eyebrow),.contact-card > p,.concept-details p { max-width:58ch; line-height:1.65; }
+.service-grid { align-items:stretch; }
+.service-card { display:flex; flex-direction:column; align-items:flex-start; }
+.service-card > p:not(.card-number) { flex:1; }
+a,.button,.service-card,.service-photo,.nav-contact,.menu-toggle { transition:color .22s ease,background-color .22s ease,border-color .22s ease,transform .28s ease,box-shadow .28s ease,filter .3s ease; }
+.button { border-radius:24px; }
+@media (max-width:900px) {
+  .photo-notes { padding:60px 7%; }
+}
+@media (max-width:650px) {
+  .photo-notes { padding:52px 7%; }
+  .photo-notes-grid { grid-template-columns:1fr; gap:14px; }
+  .photo-notes figure { border-radius:20px; }
+  .photo-notes figcaption { padding:13px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-notes img,.photo-notes figure:hover img,.service-card,.service-photo,a,.button,.nav-contact,.menu-toggle { transition:none !important; }
+  .photo-notes figure:hover img { transform:none; filter:none; }
+}
