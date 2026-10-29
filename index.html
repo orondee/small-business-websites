@@ -443,6 +443,21 @@
       }
     }
     
+  
+    /* Polished reading rhythm and photo interaction. */
+    h1,h2,h3 { text-wrap:balance }
+    p { text-wrap:pretty }
+    .project-info > p { max-width:52ch; line-height:1.7 }
+    .project-stock-photo { display:block; width:100%; aspect-ratio:16/9; margin:0 0 16px; border:1px solid var(--line); object-fit:cover; transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .35s }
+    .project:hover .project-stock-photo { transform:scale(1.015); filter:saturate(1.06) }
+    .project,.project-link,.masthead nav a,.menu-toggle { transition:transform .25s ease,color .2s ease,background-color .2s ease,border-color .2s ease }
+    .project:hover { transform:translateY(-3px) }
+    .project-link:hover { transform:translateX(3px) }
+    .button { border-radius:24px; transition:transform .2s ease,background-color .2s ease }
+    @media (prefers-reduced-motion: reduce) {
+      .project,.project-stock-photo,.project-link,.masthead nav a,.menu-toggle,.button { transition:none !important }
+      .project:hover,.project-link:hover,.project:hover .project-stock-photo { transform:none; filter:none }
+    }
   </style>
 </head>
 <body>
@@ -475,8 +490,9 @@
         <div class="project-info">
           <div class="project-meta"><span>PROJECT 01</span><span>Service business</span></div>
           <h2>GreenLine Lawn Care</h2>
-          <p>A neighborhood lawn-care concept shaped by confident greens, Manrope typography, a custom CSS landscape, high-resolution service photography, and subtle motion that respects reduced-motion settings.</p>
-          <img class="project-photo" src="assets/lawn-scene.svg" alt="Freshly maintained green lawn beside a home" loading="eager">
+          <p>A neighborhood lawn-care concept shaped by confident greens, Manrope typography, a custom CSS landscape, considered photography, and subtle motion that respects reduced-motion settings.</p>
+          <img class="project-photo" src="assets/lawn-scene.svg" alt="Illustration of a freshly maintained lawn beside a home" loading="eager">
+          <img class="project-stock-photo" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=82" alt="Sunlight across a green field at the start of the day" width="1200" height="800" loading="lazy" decoding="async">
           <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
           <a class="project-link" href="./greenline-lawn-care/">Explore the demo <span aria-hidden="true">↗</span></a>
         </div>
@@ -491,8 +507,9 @@
         <div class="project-info">
           <div class="project-meta"><span>PROJECT 02</span><span>Home services</span></div>
           <h2>BrightSide Home Cleaning</h2>
-          <p>A calmer, more editorial cleaning concept pairing DM Serif Display with DM Sans, soft terracotta and ink-blue details, a custom product illustration, high-resolution home photography, and restrained motion.</p>
-          <img class="project-photo" src="assets/sunlit-room.svg" alt="Bright, calm contemporary living space" loading="eager">
+          <p>A calmer, more editorial cleaning concept pairing DM Serif Display with DM Sans, soft terracotta and ink-blue details, a custom product illustration, considered home photography, and restrained motion.</p>
+          <img class="project-photo" src="assets/sunlit-room.svg" alt="Illustration of a bright, calm contemporary living space" loading="eager">
+          <img class="project-stock-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=82" alt="Warm, sunlit modern home interior" width="1200" height="800" loading="lazy" decoding="async">
           <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
           <a class="project-link" href="./brightside-cleaning/">Explore the demo <span aria-hidden="true">↗</span></a>
         </div>
