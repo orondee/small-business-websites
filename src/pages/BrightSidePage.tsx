@@ -1336,6 +1336,13 @@ Please check calendar availability for an initial walkthrough or first clean.`;
               <a href="#details" onClick={(e) => handleAnchorClick(e, 'details')}>
                 Book Consultation
               </a>
+              <a
+                href="https://github.com/orondee/small-business-websites"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repo ↗
+              </a>
             </nav>
           </div>
         </footer>

@@ -74,6 +74,14 @@ export function NotFoundPage() {
           >
             BrightSide sample
           </button>
+          <a
+            className="btn btn-outline"
+            href="https://github.com/orondee/small-business-websites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Repo ↗
+          </a>
         </div>
       </main>
     </div>

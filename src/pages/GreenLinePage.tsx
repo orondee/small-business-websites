@@ -1188,6 +1188,13 @@ Please confirm crew availability for my neighborhood address.`;
               <a href="#contact" onClick={(e) => handleAnchorClick(e, 'contact')}>
                 Contact
               </a>
+              <a
+                href="https://github.com/orondee/small-business-websites"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repo ↗
+              </a>
             </nav>
           </div>
         </footer>

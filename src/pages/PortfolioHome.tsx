@@ -83,6 +83,14 @@ export function PortfolioHome() {
             <a href="#estimator" onClick={(e) => handleAnchorClick(e, 'estimator')}>
               Project Estimator
             </a>
+            <a
+              href="https://github.com/orondee/small-business-websites"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+            >
+              GitHub ↗
+            </a>
             {/* Zone 3: Primary CTA */}
             <a
               className="btn btn-primary btn-sm"
@@ -766,7 +774,14 @@ export function PortfolioHome() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub Repository
+              GitHub Repository ↗
+            </a>
+            <a
+              href="https://orondee.github.io/small-business-websites/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Pages Demo ↗
             </a>
           </nav>
         </div>
