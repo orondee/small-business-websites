@@ -16,24 +16,36 @@ Modern, mobile-friendly website concepts for small service businesses, engineere
 
 ---
 
-## Why GitHub Pages Shows the Previous Version & How to Sync
+---
 
-GitHub Pages is a static host that directly reads the files from your GitHub repository `orondee/small-business-websites`.
-When changes are made in the studio environment, they need to be pushed to your GitHub repository so GitHub Pages can publish them.
+## Why GitHub Pages Showed a White Screen & How It Is Solved
 
-We have configured an automated **GitHub Actions workflow** (`.github/workflows/deploy.yml`) and base routing (`base: './'`).
+### Root Cause
+GitHub Pages is a static web host that serves files directly from your repository `orondee/small-business-websites`.
+When GitHub Pages deployed the root of the repository, the browser parsed `index.html` and tried to load raw TypeScript files (`/src/main.tsx`), which returned a 404 error because browsers cannot run uncompiled TypeScript without Vite. This resulted in an empty root `<div>` and a white screen.
 
-### Syncing Steps to Update `github.io`:
+### The Complete Solution Implemented
+1. **Universal Bootloader in `index.html`**:
+   `index.html` now intelligently detects whether it is running in local development (loading TypeScript via Vite) or on static GitHub Pages hosting. On GitHub Pages, it automatically loads the pre-compiled JavaScript bundle (`assets/app.js` and `assets/app.css`).
+2. **Standalone Production Bundles**:
+   Running `npm run build` generates `assets/app.js`, `assets/app.css`, and copies them directly into `assets/` in both `dist/` and the repo root.
+3. **Instant In-App Exploration**:
+   In the live app preview, every concept card and banner link now features an **Instant In-App View** button that loads the demo immediately without leaving the app or waiting for git syncs.
+4. **Automated GitHub Actions Deployment**:
+   `.github/workflows/deploy.yml` builds Vite and deploys `dist/` automatically on push.
 
-1. In your local repository terminal:
-   ```bash
-   git add .
-   git commit -m "Upgrade to modern React portfolio with bespoke pricing visualizers"
-   git push origin main
-   ```
-2. In your GitHub repository settings under **Settings > Pages**:
-   - Set **Source** to **GitHub Actions** (recommended) or deploy from the `main` branch.
-   - The automated GitHub Actions workflow will build Vite and deploy the latest version directly to `https://orondee.github.io/small-business-websites/`!
+### 30-Second Fix to Update `github.io`
+Run these commands in your repository terminal to push the compiled assets to GitHub:
+
+```bash
+git add .
+git commit -m "Fix GitHub Pages white screen: add compiled bundle and universal bootloader"
+git push origin main
+```
+
+Once pushed:
+- If your GitHub repository uses **Deploy from a branch** (`main` / root): The site at `https://orondee.github.io/small-business-websites/` will immediately load `assets/app.js` with zero white screen!
+- If your repository uses **GitHub Actions** (under Settings > Pages > Source): The workflow will automatically build and publish `./dist`.
 
 ---
 

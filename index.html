@@ -14,9 +14,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="./assets/app.css">
 </head>
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Universal bootloader: In Vite dev mode, imports ./src/main.tsx; in static GitHub Pages, loads ./assets/app.js -->
+  <script type="module">
+    const isViteDev = window.location.hostname === 'localhost' ||
+                      window.location.hostname === '127.0.0.1' ||
+                      window.location.port === '3000' ||
+                      window.location.hostname.includes('run.app');
+
+    if (isViteDev) {
+      import('./src/main.tsx').catch(err => {
+        console.warn('Vite dev import error, falling back to bundled script', err);
+        const s = document.createElement('script');
+        s.type = 'module';
+        s.crossOrigin = 'anonymous';
+        s.src = './assets/app.js';
+        document.body.appendChild(s);
+      });
+    } else {
+      const s = document.createElement('script');
+      s.type = 'module';
+      s.crossOrigin = 'anonymous';
+      s.src = './assets/app.js';
+      document.body.appendChild(s);
+    }
+  </script>
 </body>
 </html>
+
