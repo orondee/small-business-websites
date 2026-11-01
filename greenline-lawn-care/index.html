@@ -2,255 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- This lets mobile browsers use the real device width. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GreenLine Lawn Care is a fictional lawn-care portfolio project with a friendly neighborhood feel.">
-  <title>GreenLine Lawn Care | A little greener, every day</title>
+  <title>GreenLine Lawn Care — A lawn you love coming home to</title>
+  <meta name="description" content="GreenLine Lawn Care is a fictional neighborhood lawn-care website concept: mowing, garden tidy-ups and seasonal cleanups.">
+  <meta property="og:title" content="GreenLine Lawn Care — A lawn you love coming home to">
+  <meta property="og:description" content="A modern, friendly website concept for a neighborhood lawn-care business.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80">
+  <meta name="theme-color" content="#1d4a35">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%231d4a35%22/%3E%3Ctext x=%2220%22 y=%2228%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22800%22 font-size=%2222%22 fill=%22white%22%3EG%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#123b2a">
-  <meta property="og:title" content="GreenLine Lawn Care | A little greener, every day">
-  <meta property="og:description" content="A polished fictional neighborhood lawn-care website concept.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%23174831%22/%3E%3Ctext x=%2220%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2227%22 font-style=%22italic%22 fill=%22white%22%3EG%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261029-photo-motion">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/base.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="demo-banner">Portfolio concept · GreenLine is fictional. Services and contact details are examples; photos are illustrative stock images, not GreenLine work.</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-banner">Portfolio concept · GreenLine is fictional. Services and contact details are examples; photos are stock images. <a href="../">← Back to portfolio</a></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="GreenLine Lawn Care home">
-      <span class="brand-mark" aria-hidden="true">G</span>
-      <span>GreenLine <small>Lawn Care</small></span>
-    </a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="greenline-navigation">Menu</button>
-    <nav id="greenline-navigation" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
-    </nav>
+    <div class="shell">
+      <a class="brand" href="#main" aria-label="GreenLine Lawn Care, back to top"><span class="brand-mark" aria-hidden="true">G</span><span>GreenLine <small>Lawn Care</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="greenline-navigation"><span>Menu</span></button>
+      <nav class="site-nav" id="greenline-navigation" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary btn-sm" href="#contact">Free estimate</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Your neighborhood, a little greener</p>
-        <h1 id="hero-title">A lawn you love<br>coming home to.</h1>
-        <p class="hero-description">Thoughtful lawn care that gives you more time to enjoy your outdoor space. Friendly service, tidy results, no fuss.</p>
-        <div class="hero-actions">
-          <a class="button button-light" href="#contact">Get a free estimate <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#services">Explore our services <span aria-hidden="true">↓</span></a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1800&q=80" alt="" width="1800" height="1200">
+      <div class="shell">
+        <p class="eyebrow rise">Your neighborhood, a little greener</p>
+        <h1 id="hero-title" class="rise">A lawn you love coming home to.</h1>
+        <p class="lead rise">Thoughtful lawn care that gives you more time to enjoy your outdoor space. Friendly service, tidy results, no fuss.</p>
+        <div class="btn-row rise">
+          <a class="btn btn-accent" href="#contact">Get a free estimate →</a>
+          <a class="btn btn-outline" href="#services">Explore services</a>
         </div>
-        <div class="hero-note">
-          <span class="note-icon" aria-hidden="true">✳</span>
-          <span><strong>Good neighbors. Great lawns.</strong><br>A sample concept for neighborhood yards</span>
-        </div>
-      </div>
-
-      <!-- Decorative CSS landscape; hidden from screen readers because it is not content. -->
-      <div class="hero-art" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="cloud cloud-one"></div>
-        <div class="cloud cloud-two"></div>
-        <div class="hill hill-back"></div>
-        <div class="hill hill-front"></div>
-        <div class="house">
-          <div class="roof"></div>
-          <div class="house-body">
-            <div class="window window-one"></div>
-            <div class="window window-two"></div>
-            <div class="door"></div>
-          </div>
-        </div>
-        <div class="tree tree-one"><i></i><b></b></div>
-        <div class="tree tree-two"><i></i><b></b></div>
-        <div class="flower flower-one">✿</div>
-        <div class="flower flower-two">✿</div>
-        <div class="flower flower-three">✿</div>
-        <div class="art-caption"><span>01 / 03</span><span>The GreenLine difference</span><span class="caption-line"></span></div>
       </div>
     </section>
 
-    <section class="intro-strip" aria-label="Our approach">
-      <p><span aria-hidden="true">✳</span> A little care goes a long way.</p>
-      <p>Reliable visits <i aria-hidden="true">•</i> Clear pricing <i aria-hidden="true">•</i> Happier weekends</p>
+    <section class="perks" aria-label="Why GreenLine">
+      <ul class="shell">
+        <li><span aria-hidden="true">📅</span>Reliable visits</li>
+        <li><span aria-hidden="true">✓</span>Clear pricing</li>
+        <li><span aria-hidden="true">✦</span>Tidy results</li>
+        <li><span aria-hidden="true">☀</span>Happier weekends</li>
+      </ul>
     </section>
 
-    <section class="section services" id="services" aria-labelledby="services-title">
-      <div class="section-heading">
+    <section class="section shell" id="services" aria-labelledby="services-title">
+      <div class="section-head">
         <div>
-          <p class="eyebrow">What we can do for you</p>
+          <p class="eyebrow">What we do</p>
           <h2 id="services-title">Care for every corner.</h2>
         </div>
-        <p>From the first spring trim to the last leaf of fall, we keep things looking their best.</p>
+        <p class="muted" style="max-width:420px;font-size:1.1rem">From the first spring trim to the last leaf of fall, we keep things looking their best.</p>
       </div>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Fresh green lawn in bright afternoon sunlight" loading="lazy" decoding="async">
-          <div class="service-icon icon-mow" aria-hidden="true"><span>〰</span></div>
-          <p class="card-number">01 / The essential</p>
-          <h3>Lawn mowing</h3>
-          <p>Neat, even cuts and crisp edges that keep your yard looking fresh all season.</p>
-          <a href="#contact">Ask about lawn mowing <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Fresh potting soil and gardening tools ready for a garden bed" loading="lazy" decoding="async">
-          <div class="service-icon icon-garden" aria-hidden="true"><span>✿</span></div>
-          <p class="card-number">02 / The refresh</p>
-          <h3>Garden tidy-up</h3>
-          <p>Weeding, bed cleanup, and a little extra attention where your garden needs it.</p>
-          <a href="#contact">Ask about garden tidy-up <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="service-card">
-          <img class="service-photo" src="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=480&q=76 480w, https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=800&q=80 800w, https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=1400&q=82 1400w" sizes="(max-width: 650px) 90vw, (max-width: 1000px) 44vw, 30vw" width="1400" height="788" alt="Autumn leaves scattered across a green lawn" loading="lazy" decoding="async">
-          <div class="service-icon icon-leaf" aria-hidden="true"><span>↗</span></div>
-          <p class="card-number">03 / The finishing touch</p>
-          <h3>Seasonal cleanups</h3>
-          <p>Leaf clearing and seasonal prep to help your outdoor space feel cared for.</p>
-          <a href="#contact">Ask about seasonal cleanups <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="concept-details" aria-label="Example business details">
-      <span>Example business details</span>
-      <p>A real version would confirm its service area, visit schedule, and typical reply time before launch. These details remain illustrative, and the photos are stock images.</p>
-      <a href="#contact">Ask a question <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <section class="photo-notes" aria-labelledby="green-photo-title">
-      <div class="photo-notes-heading"><p class="eyebrow">A little more of the neighborhood</p><h2 id="green-photo-title">Room to enjoy the outdoors.</h2></div>
-      <div class="photo-notes-grid">
-        <figure><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=82" alt="Sunlight falling across a green field" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Open space, ready for the weekend</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=82" alt="Leafy houseplants growing in soft natural light" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Small details that make a yard feel cared for</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div class="about-art" aria-hidden="true">
-        <div class="about-sun"></div>
-        <div class="about-hill"></div>
-        <div class="about-sprout">✳</div>
-        <span class="about-stamp">Grow<br>good<br>things</span>
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow">A small team with a lot of heart</p>
-        <h2 id="about-title">We believe a good lawn is about more than grass.</h2>
-        <p>It’s where the kids run barefoot, where neighbors stop to say hello, and where you finally get to sit down after a long week. We’re here to make that space feel a little more like yours.</p>
-        <p>GreenLine is a fictional neighborhood lawn-care company created as a web-development portfolio sample. Our friendly, reliable approach is part of the concept.</p>
-        <a class="text-link dark-link" href="#contact">Let’s make a plan <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-copy">
-        <p class="eyebrow">Your next weekend, reclaimed</p>
-        <h2 id="contact-title">Let’s talk about<br>your yard.</h2>
-        <p>Tell us what you have in mind. We’ll follow up with a friendly, no-pressure estimate.</p>
-        <div class="contact-details">
-          <div>
-            <span class="detail-icon" aria-hidden="true">✉</span>
-            <span><small>Email</small><a href="mailto:hello@example.com">hello@example.com</a></span>
+      <div class="grid-3">
+        <article class="card service">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=80" alt="Fresh green lawn in bright afternoon sunlight" width="900" height="675" loading="lazy"></div>
+          <div class="card-body">
+            <p class="num">01 / The essential</p>
+            <h3>Lawn mowing</h3>
+            <p class="muted">Neat, even cuts and crisp edges that keep your yard looking fresh all season.</p>
+            <a class="card-link" href="#contact">Ask about lawn mowing ↗</a>
           </div>
-          <div>
-            <span class="detail-icon" aria-hidden="true">⌕</span>
-            <span><small>Phone</small><a href="tel:+15550140123">(555) 014-0123</a></span>
+        </article>
+        <article class="card service">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80" alt="Fresh potting soil and gardening tools ready for a garden bed" width="900" height="675" loading="lazy"></div>
+          <div class="card-body">
+            <p class="num">02 / The refresh</p>
+            <h3>Garden tidy-up</h3>
+            <p class="muted">Weeding, bed cleanup, and a little extra attention where your garden needs it.</p>
+            <a class="card-link" href="#contact">Ask about garden tidy-up ↗</a>
           </div>
-          <div>
-            <span class="detail-icon" aria-hidden="true">⌖</span>
-            <span><small>Where we work</small><span>Maplewood &amp; nearby</span></span>
+        </article>
+        <article class="card service">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1742519787699-df9581475f0a?auto=format&fit=crop&w=900&q=80" alt="Autumn leaves scattered across a green lawn" width="900" height="675" loading="lazy"></div>
+          <div class="card-body">
+            <p class="num">03 / The finishing touch</p>
+            <h3>Seasonal cleanups</h3>
+            <p class="muted">Leaf clearing and seasonal prep to help your outdoor space feel cared for.</p>
+            <a class="card-link" href="#contact">Ask about seasonal cleanups ↗</a>
           </div>
+        </article>
+      </div>
+      <p class="note-box"><strong>Example business details.</strong> A real version would confirm its service area, visit schedule and typical reply time before launch.</p>
+    </section>
+
+    <section class="section section-dark about" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="about-photos">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80" alt="Sunlight falling across a green field" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80" alt="Leafy houseplants growing in soft natural light" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">A small team with a lot of heart</p>
+          <h2 id="about-title">A good lawn is about more than grass.</h2>
+          <p class="big muted">It’s where the kids run barefoot, where neighbors stop to say hello, and where you finally get to sit down after a long week. We’re here to make that space feel a little more like yours.</p>
+          <p class="muted" style="font-size:.88rem">GreenLine is a fictional company created as a web-design portfolio sample.</p>
+          <div class="btn-row" style="margin-top:30px"><a class="btn btn-accent" href="#contact">Let’s make a plan →</a></div>
         </div>
       </div>
+    </section>
 
-      <div class="contact-card">
-        <span class="contact-card-kicker">Let’s get started</span>
-        <span class="contact-spark" aria-hidden="true">✳</span>
-        <h3>Have a question<br>or a project in mind?</h3>
-        <p>This sample layout shows how an estimate form could look. It is not connected to a real inbox, and messages are not sent or stored.</p>
-        <!-- This demo form is front-end only: no server receives the message. -->
-        <form class="contact-form" id="demo-form" novalidate>
-          <p class="form-error-summary" id="form-error-summary" role="alert" tabindex="-1" hidden>Please check the highlighted fields and try again.</p>
-          <label for="visitor-name">Your name</label>
-          <input id="visitor-name" name="name" type="text" autocomplete="name" aria-describedby="visitor-name-error" required>
-          <small class="field-error" id="visitor-name-error"></small>
-          <label for="visitor-email">Email address</label>
-          <input id="visitor-email" name="email" type="email" autocomplete="email" aria-describedby="visitor-email-error" required>
-          <small class="field-error" id="visitor-email-error"></small>
-          <label for="visitor-message">What can we help with?</label>
-          <textarea id="visitor-message" name="message" rows="3" aria-describedby="visitor-message-error" required></textarea>
-          <small class="field-error" id="visitor-message-error"></small>
-          <button class="button button-green" type="submit" aria-describedby="form-demo-note">Preview sample request</button>
-          <p class="form-confirmation" id="form-confirmation" role="status" aria-live="polite" hidden></p>
-          <small id="form-demo-note" class="form-demo-note">This sample form does not send or save messages.</small>
-        </form>
-        <a class="direct-email" href="mailto:hello@example.com?subject=GreenLine%20Lawn%20Care%20estimate">Or email GreenLine directly</a>
+    <section class="section shell contact" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Your next weekend, reclaimed</p>
+        <h2 id="contact-title">Let’s talk about your yard.</h2>
+        <p class="muted" style="margin-top:18px;font-size:1.1rem">Tell us what you have in mind. We’ll follow up with a friendly, no-pressure estimate.</p>
+        <ul class="contact-list">
+          <li><span class="icon" aria-hidden="true">✉</span><span><small>Email (example)</small><a href="mailto:hello@example.com">hello@example.com</a></span></li>
+          <li><span class="icon" aria-hidden="true">☏</span><span><small>Phone (example)</small><a href="tel:+15550140123">(555) 014-0123</a></span></li>
+          <li><span class="icon" aria-hidden="true">⌖</span><span><small>Where we work (example)</small><b>Maplewood &amp; nearby</b></span></li>
+        </ul>
       </div>
+      <form class="form-card" id="demo-form" novalidate>
+        <h3>Request a sample estimate</h3>
+        <p>This demo form isn’t connected to an inbox — nothing is sent or stored.</p>
+        <div class="field">
+          <label for="visitor-name">Your name</label>
+          <input id="visitor-name" name="name" autocomplete="name" aria-describedby="visitor-name-error">
+          <p class="field-error" id="visitor-name-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="visitor-email">Email address</label>
+          <input id="visitor-email" name="email" type="email" autocomplete="email" aria-describedby="visitor-email-error">
+          <p class="field-error" id="visitor-email-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="visitor-message">What can we help with?</label>
+          <textarea id="visitor-message" name="message" rows="4" aria-describedby="visitor-message-error"></textarea>
+          <p class="field-error" id="visitor-message-error" aria-live="polite"></p>
+        </div>
+        <button class="btn btn-primary" type="submit">Preview sample request</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <nav class="footer-nav" aria-label="Footer navigation"><a href="../">Portfolio home</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
-    <a class="brand footer-brand" href="#home">
-      <span class="brand-mark" aria-hidden="true">G</span>
-      <span>GreenLine <small>Lawn Care</small></span>
-    </a>
-    <p>Made with care for a greener neighborhood.</p>
-    <span>© <time data-current-year datetime="2026">2026</time> GreenLine Lawn Care</span>
-    <span>Photography via <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+    <div class="shell">
+      <a class="brand" href="#main"><span class="brand-mark" aria-hidden="true">G</span>GreenLine Lawn Care</a>
+      <span>© <span data-current-year>2026</span> GreenLine Lawn Care · Photography via Unsplash</span>
+      <nav aria-label="Footer"><a href="../">Portfolio home</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+    </div>
   </footer>
-<script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector("#greenline-navigation");
-  menuToggle.addEventListener("click", () => {
-    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!expanded));
-    navigation.classList.toggle("is-open", !expanded);
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
-      navigation.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.focus();
-    }
-  });
-  navigation.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      navigation.classList.remove("is-open");
-    }
-  });
-  document.querySelector("[data-current-year]").textContent = String(new Date().getFullYear());
-  const demoForm = document.querySelector("#demo-form");
-  const confirmation = document.querySelector("#form-confirmation");
-  const summary = document.querySelector("#form-error-summary");
-  const fields = [
-    { input: document.querySelector("#visitor-name"), error: document.querySelector("#visitor-name-error"), message: "Enter your name." },
-    { input: document.querySelector("#visitor-email"), error: document.querySelector("#visitor-email-error"), message: "Enter a valid email address." },
-    { input: document.querySelector("#visitor-message"), error: document.querySelector("#visitor-message-error"), message: "Add a short message." }
-  ];
-  fields.forEach(({ input, error }) => input.addEventListener("input", () => {
-    input.removeAttribute("aria-invalid"); error.textContent = "";
-    if (fields.every(({ input: field }) => !field.getAttribute("aria-invalid"))) summary.hidden = true;
-  }));
-  demoForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    confirmation.hidden = true;
-    summary.hidden = true;
-    let hasError = false;
-    fields.forEach(({ input, error, message }) => {
-      const invalid = !input.value.trim() || !input.validity.valid;
-      input.setAttribute("aria-invalid", String(invalid));
-      error.textContent = invalid ? message : "";
-      hasError ||= invalid;
-    });
-    if (hasError) { summary.hidden = false; summary.focus(); return; }
-    confirmation.hidden = false;
-    confirmation.textContent = "Sample complete. This portfolio demo did not send or store your information.";
-    demoForm.reset();
-  });
-  </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>

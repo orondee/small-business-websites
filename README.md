@@ -1,88 +1,71 @@
 # Small Business Website Portfolio
 
-**[Open the live portfolio](https://orondee.github.io/small-business-websites/)**
+**[Open the live portfolio →](https://orondee.github.io/small-business-websites/)**
 
-A beginner-friendly portfolio with two responsive website concepts for fictional small businesses. The projects use plain HTML and CSS, plus a small JavaScript interaction on the GreenLine demo form.
+Modern, mobile-friendly website concepts for small service businesses, built with plain HTML, CSS and a little JavaScript. No install or build step.
 
-## View the sites
+| Page | Live link |
+| --- | --- |
+| Portfolio homepage | [orondee.github.io/small-business-websites](https://orondee.github.io/small-business-websites/) |
+| GreenLine Lawn Care | [/greenline-lawn-care/](https://orondee.github.io/small-business-websites/greenline-lawn-care/) |
+| BrightSide Home Cleaning | [/brightside-cleaning/](https://orondee.github.io/small-business-websites/brightside-cleaning/) |
 
-- [Portfolio homepage](https://orondee.github.io/small-business-websites/)
-- [GreenLine Lawn Care](https://orondee.github.io/small-business-websites/greenline-lawn-care/)
-- [BrightSide Home Cleaning](https://orondee.github.io/small-business-websites/brightside-cleaning/)
+> **These are demos.** GreenLine and BrightSide are fictional businesses, not real companies or client work. Names, contact details, services and locations are examples. The GreenLine form only shows a sample confirmation in your browser — it never sends or stores anything.
 
-## Important: these are demos
+## What makes it easy to use
 
-GreenLine and BrightSide are fictional portfolio concepts, not real companies or client work. Names, contact details, service descriptions, locations, and response times are examples.
-
-The GreenLine form only displays a sample confirmation in the browser. It does not send or store messages. Do not enter real personal information. BrightSide has no working booking or contact form.
+- A sticky menu on every page, with a phone-friendly menu button (press **Esc** to close it).
+- A **Skip to content** link for keyboard users.
+- Each sample site has a **Back to portfolio** link in its top banner and footer.
+- Clear buttons for the main action on each page (free estimate, find your clean).
+- The sample form points out exactly which field needs fixing.
+- Motion is turned off automatically for people who prefer reduced motion.
 
 ## Project map
 
 | File or folder | What it contains |
 | --- | --- |
-| `index.html` | Portfolio homepage and project summaries. Its small homepage stylesheet is in the `<style>` section of this file. |
-| `assets/lawn-scene.svg` | Lawn illustration shown on the portfolio homepage. |
-| `assets/sunlit-room.svg` | Room illustration shown on the portfolio homepage. |
-| `greenline-lawn-care/index.html` | GreenLine page content, image URLs, and sample-form interaction. |
-| `greenline-lawn-care/styles.css` | GreenLine layout, colors, typography, transitions, and responsive rules. |
-| `brightside-cleaning/index.html` | BrightSide page content and image URLs. |
-| `brightside-cleaning/styles.css` | BrightSide layout, colors, typography, animations, and responsive rules. |
-
-The two project pages use Manrope for GreenLine and DM Sans with DM Serif Display for BrightSide. Service photos are requested from the Unsplash image CDN. Google Fonts and the photos need an internet connection; system-font fallbacks are included.
+| `index.html` | Portfolio homepage (its own small styles are at the top of the file). |
+| `assets/base.css` | Shared layout: header, menu, buttons, cards, form fields, footer. |
+| `assets/site.js` | Shared behavior: phone menu, footer year, GreenLine sample form. |
+| `greenline-lawn-care/index.html` | GreenLine page content and photos. |
+| `greenline-lawn-care/styles.css` | GreenLine colors, fonts and page-specific layout. |
+| `brightside-cleaning/index.html` | BrightSide page content and photos. |
+| `brightside-cleaning/styles.css` | BrightSide colors, fonts and page-specific layout. |
+| `404.html` | Friendly “page not found” screen used by GitHub Pages. |
 
 ## Make a change
 
-For a quick edit on GitHub, open a file, select the pencil icon, make the change, then commit it to the repository. To work on a copy, download the repository ZIP from GitHub and open the folder in a code editor.
+- **Text or links:** edit the page's `index.html`.
+- **Colors or fonts for one site:** change the variables at the top of that site's `styles.css`.
+- **Something on every page (buttons, menu, cards):** edit `assets/base.css`.
+- **Photos:** change the image `src` and write an accurate `alt` description. Make sure you have the right to use it.
 
-- Change headings, paragraphs, links, and image descriptions in the relevant `index.html`.
-- Change colors, spacing, fonts, layouts, and motion in the matching `styles.css`.
-- To replace a photo, change its `src` URL and write an accurate `alt` description. Check that you have the right to use the replacement image.
-- The portfolio homepage drawings are the two SVG files listed above. The unused draft images have been removed.
+Quick edit on GitHub: open a file, click the pencil icon, make the change and commit.
 
 ## Preview on your computer
 
-These are static files, so there is no package install or build step. You can open the top-level `index.html` in a browser. For a local web address, open a terminal in the project folder and run:
+Double-click `start-local-server.bat` (Windows), or open a terminal in this folder and run:
 
 ```text
-py -m http.server 8000
+py -m http.server 8000        # Windows
+python3 -m http.server 8000   # macOS / Linux
 ```
 
-Then visit [http://localhost:8000](http://localhost:8000). If the `py` command is not available, try `python -m http.server 8000` or open `index.html` directly.
+Then visit <http://localhost:8000>. See `LOCAL_DEV.md` for more detail.
 
-## Check your edits
+## Before you publish a change
 
-Before sharing a change:
+1. Open the portfolio and both demos on a desktop and a phone width.
+2. Open and close the phone menu; check every menu and footer link.
+3. Check that photos load and their descriptions match.
+4. Try the GreenLine form with made-up details: empty fields show errors, valid details show the sample confirmation.
+5. Keep the demo notices visible.
 
-1. Open each demo from the portfolio homepage.
-2. Use the navigation and check that each section link goes to the right place.
-3. Confirm the photos load and their descriptions match what is shown.
-4. Check the layout at phone and desktop widths.
-5. Try GreenLine's form with made-up details; confirm that the demo message appears and no real message is sent.
-6. If you change motion, keep the reduced-motion rules in place.
+## Publishing
 
-## Publish changes
-
-GitHub Pages already publishes this repository. When a change is committed to the published branch, GitHub starts a Pages build and deployment. Check the repository's **Actions** tab for a successful `pages build and deployment` run; the live site can take a short time to update. A hard refresh can help if your browser is still showing a cached version.
+GitHub Pages publishes this repository automatically. After you commit, check the **Actions** tab for a green `pages build and deployment` run. A hard refresh helps if you still see the old version.
 
 ## Photos and reuse
 
-The service photos are loaded from Unsplash rather than stored in this repository. Read the [Unsplash License](https://unsplash.com/license) before reusing them elsewhere. This repository does not include a general code license; ask the owner before reusing its code or original illustrations.
-
-
-### Not found page
-
-GitHub Pages serves the root `404.html` for unknown paths. Its links use the published project path so they work from nested addresses too.
-
-
-## Quick manual review
-
-After a change, open the portfolio and both sample pages at desktop and phone widths. Check that:
-
-- The mobile menu opens, closes after a link is chosen, and exposes its state to assistive technology.
-- Images load, stay within their cards, and have meaningful alternative text.
-- Footer links and page-section links reach the intended destinations.
-- The GreenLine sample form shows field errors for incomplete entries and a confirmation for valid sample data. It must never send or store a message.
-- The custom not-found page links back to the portfolio and both samples.
-- The portfolio disclaimer remains visible and sample businesses are not presented as real clients.
-
-The BrightSide contact details are intentionally illustrative and are not provided as real business contacts.
+Service photos load from Unsplash — see the [Unsplash License](https://unsplash.com/license). This repository has no general code license; ask the owner before reusing its code.

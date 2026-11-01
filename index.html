@@ -3,551 +3,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Responsive website concepts for small businesses, built with HTML and CSS and presented in a clear, mobile-friendly portfolio.">
   <title>Small Business Sites — Web Design Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%232f4939%22/%3E%3Ctext x=%2220%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2227%22 fill=%22white%22%3ES%3C/text%3E%3C/svg%3E">
-  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="Modern, mobile-friendly website concepts for small businesses: a lawn-care and a home-cleaning demo.">
+  <meta property="og:title" content="Small Business Sites — Web Design Portfolio">
+  <meta property="og:description" content="Two modern website concepts for small service businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=80">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%23232b24%22/%3E%3Ctext x=%2220%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2226%22 fill=%22white%22%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/base.css">
   <style>
-    :root {
-      --paper:#f4f0e7;
-      --ink:#20251f;
-      --muted:#686d61;
-      --line:#d7d3c8;
-      --moss:#566747;
-      --orange:#c95d3b;
-      --blue:#243d4b;
-      --serif:Georgia,"Times New Roman",serif
+    .hero { padding: 104px 0 96px; background: radial-gradient(120% 80% at 100% 0%, rgb(246 214 190 / 60%), transparent 60%); }
+    .hero .shell { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: end; }
+    .pill-label { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); }
+    .pill-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .hero h1 { font-size: clamp(3.25rem, 8vw, 7rem); line-height: .95; }
+    .hero h1 em { color: var(--accent); }
+    .hero-side p { margin-bottom: 24px; font-size: 1.15rem; color: var(--muted); }
+    .project { text-decoration: none; }
+    .project .card-media { position: relative; }
+    .badge { position: absolute; top: 16px; left: 16px; padding: 4px 12px; border-radius: 999px; background: rgb(255 255 255 / 90%); font-size: .78rem; font-weight: 500; }
+    .project h3 { font-family: var(--font-heading); font-weight: 400; font-size: 2.4rem; }
+    .project .eyebrow { margin: 0; color: var(--muted); }
+    .approach .shell { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; }
+    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; overflow: hidden; border-radius: var(--radius); background: rgb(255 255 255 / 10%); }
+    .principles div { padding: 28px; background: var(--surface); }
+    .principles b { display: block; margin-bottom: 6px; }
+    .principles .num { display: block; margin-bottom: 18px; color: var(--accent); font-family: var(--font-heading); font-size: 1.5rem; }
+    h2.display { font-size: clamp(2.6rem, 5vw, 4rem); }
+    @media (max-width: 900px) {
+      .hero .shell, .approach .shell { grid-template-columns: 1fr; }
+      .hero { padding: 72px 0; }
     }
-    
-    * {
-      box-sizing:border-box
-    }
-    
-    html {
-      scroll-behavior:smooth
-    }
-    
-    body {
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font:16px/1.6 Arial,Helvetica,sans-serif
-    }
-    
-    a {
-      color:inherit;
-      text-decoration:none
-    }
-    
-    img { max-width:100%; height:auto }
-    button:focus-visible { outline:3px solid var(--orange); outline-offset:4px }
-    a:focus-visible {
-      outline:3px solid var(--orange);
-      outline-offset:4px
-    }
-    
-    .shell {
-      width:min(1120px,88%);
-      margin:auto
-    }
-    
-    .masthead {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:25px 0;
-      border-bottom:1px solid var(--line);
-      font-size:.78rem
-    }
-    
-    .masthead { position:relative }
-    .menu-toggle { display:none; padding:9px 12px; border:1px solid var(--line); background:transparent; color:var(--ink); font:inherit; cursor:pointer }
-    .masthead nav { display:flex; align-items:center; gap:22px; font-size:.78rem }
-    .masthead nav a:hover { color:var(--orange) }
-    .wordmark {
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase
-    }
-    
-    .masthead-note {
-      color:var(--muted)
-    }
-    
-    .intro {
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:50px;
-      align-items:end;
-      padding:76px 0 52px
-    }
-    
-    .kicker {
-      margin:0 0 17px;
-      color:var(--moss);
-      font-size:.72rem;
-      font-weight:800;
-      letter-spacing:.17em;
-      text-transform:uppercase
-    }
-    
-    .intro h1 {
-      max-width: 720px;
-      margin:0;
-      font:400 clamp(3.5rem,8vw,7.2rem)/.91 var(--serif);
-      letter-spacing:-.065em
-    }
-    
-    .intro h1 em {
-      color:var(--moss);
-      font-weight:400
-    }
-    
-    .intro-side {
-      padding-bottom:5px
-    }
-    
-    .intro-side p {
-      max-width: 390px;
-      color:var(--muted);
-      font-size:1rem
-    }
-    
-    .intro-side .note {
-      padding:12px 0 12px 15px;
-      border-left:3px solid var(--orange);
-      font-size:.82rem
-    }
-    
-    .section-label {
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      padding:15px 0;
-      border-top:1px solid var(--ink);
-      font-size:.72rem;
-      font-weight:800;
-      letter-spacing:.1em;
-      text-transform:uppercase
-    }
-    
-    .section-label span:last-child {
-      color:var(--muted);
-      font-weight:400;
-      letter-spacing:0;
-      text-transform:none
-    }
-    
-    .projects {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      padding:0 0 70px
-    }
-    
-    .project {
-      min-width: 0;
-      border:1px solid var(--line);
-      background:#fbf9f3
-    }
-    
-    .project:nth-child(2) {
-      margin-top:48px
-    }
-    
-    .preview {
-      position:relative;
-      min-height:265px;
-      overflow:hidden;
-      padding:22px
-    }
-    
-    .preview-top {
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      font-size:.66rem;
-      font-weight:800;
-      letter-spacing:.12em;
-      text-transform:uppercase
-    }
-    
-    .preview-title {
-      position:absolute;
-      z-index:2;
-      left:25px;
-      bottom:23px;
-      margin:0;
-      font:400 clamp(2rem,4vw,3.1rem)/.95 var(--serif);
-      letter-spacing:-.04em
-    }
-    
-    .lawn-preview {
-      color:#f8f3e8;
-      background:#284637
-    }
-    
-    .lawn-preview:before {
-      position:absolute;
-      content:"";
-      width:245px;
-      height:245px;
-      right:-35px;
-      top:28px;
-      border:1px solid #a7bc91;
-      border-radius:50%;
-      box-shadow:0 0 0 25px #ffffff08,0 0 0 50px #ffffff08
-    }
-    
-    .lawn-preview:after {
-      position:absolute;
-      content:"";
-      width:120%;
-      height:115px;
-      right:-15%;
-      bottom:-48px;
-      border-radius:50% 50% 0 0;
-      background:#78916a;
-      transform:rotate(-8deg)
-    }
-    
-    .lawn-preview .preview-title {
-      max-width: 260px
-    }
-    
-    .lawn-preview .mini-label {
-      color:#d3dbb4
-    }
-    
-    .clean-preview {
-      color:#263b46;
-      background:#f0c9b5
-    }
-    
-    .clean-preview:before {
-      position:absolute;
-      right:16%;
-      top:52px;
-      width:142px;
-      height:185px;
-      border:2px solid #263b46;
-      border-radius:42px 42px 28px 28px;
-      background:#f7e9d8;
-      content:"";
-      transform:rotate(8deg);
-      box-shadow:15px 14px 0 #d98e70
-    }
-    
-    .clean-preview:after {
-      position:absolute;
-      right:calc(16% + 42px);
-      top:33px;
-      width:50px;
-      height:25px;
-      border-radius:5px 5px 0 0;
-      background:#263b46;
-      content:"";
-      transform:rotate(8deg)
-    }
-    
-    .clean-preview .preview-title {
-      max-width: 270px
-    }
-    
-    .clean-preview .mini-label {
-      color:#5d473f
-    }
-    
-    .project-info {
-      padding:24px 25px 27px
-    }
-    
-    .project-meta {
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      color:var(--muted);
-      font-size:.72rem
-    }
-    
-    .project-info h2 {
-      margin:14px 0 8px;
-      font:400 1.85rem/1.1 var(--serif)
-    }
-    
-    .project-info p {
-      max-width: 480px;
-      color:var(--muted);
-      font-size:.9rem
-    }
-    
-    .tags {
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      margin:17px 0 23px
-    }
-    
-    .tags span {
-      padding:5px 8px;
-      border:1px solid var(--line);
-      font-size:.69rem
-    }
-    
-    .project-link {
-      display:inline-flex;
-      align-items:center;
-      gap:16px;
-      padding-bottom:4px;
-      border-bottom:1px solid var(--ink);
-      font-size:.82rem;
-      font-weight:800
-    }
-    
-    .project-link:hover {
-      color:var(--orange);
-      border-color:var(--orange)
-    }
-    
-    .approach {
-      display:grid;
-      grid-template-columns:.75fr 1.25fr;
-      gap:55px;
-      padding:40px 0 68px;
-      border-top:1px solid var(--line)
-    }
-    
-    .approach h2 {
-      margin:0;
-      font:400 clamp(2rem,4vw,3.2rem)/1 var(--serif);
-      letter-spacing:-.04em
-    }
-    
-    .approach-list {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px
-    }
-    
-    .approach-item {
-      padding-top:10px;
-      border-top:1px solid var(--line)
-    }
-    
-    .approach-item b {
-      display:block;
-      margin-bottom:7px;
-      font-size:.87rem
-    }
-    
-    .approach-item p {
-      margin:0;
-      color:var(--muted);
-      font-size:.82rem
-    }
-    
-    footer nav { display:flex; flex-wrap:wrap; gap:16px }
-    footer a { text-decoration:underline; text-underline-offset:3px }
-    footer {
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      padding:20px 0 28px;
-      border-top:1px solid var(--ink);
-      color:var(--muted);
-      font-size:.76rem
-    }
-    
-    .demo-note {
-      max-width: 470px
-    }
-    
-    @media (max-width: 720px) {
-      .menu-toggle { display:inline-flex }
-      .masthead { flex-direction:row; align-items:center; flex-wrap:wrap }
-      .masthead nav { display:none; width:100%; flex-direction:column; align-items:flex-start; gap:0; padding:8px 0 4px }
-      .masthead nav.is-open { display:flex }
-      .masthead nav a { padding:9px 0 }
-      .masthead-note { display:none }
-      .intro {
-        grid-template-columns:1fr;
-        gap:27px;
-        padding:53px 0 38px
-      }
-      .intro h1 {
-        font-size:clamp(3.5rem,15vw,6rem)
-      }
-      .projects {
-        grid-template-columns:1fr;
-        gap:17px
-      }
-      .project:nth-child(2) {
-        margin-top:0
-      }
-      .preview {
-        min-height:230px
-      }
-      .approach {
-        grid-template-columns:1fr;
-        gap:25px
-      }
-      .masthead {
-        align-items:flex-start;
-        flex-direction:column;
-        gap:4px
-      }
-      .approach-list {
-        gap:16px
-      }
-      .section-label {
-        font-size:.65rem
-      }
-    }
-    
-    @media (max-width: 430px) {
-      .shell {
-        width:90%
-      }
-      .preview {
-        min-height:205px
-      }
-      .clean-preview:before {
-        right:9%;
-        width:115px;
-        height:155px
-      }
-      .clean-preview:after {
-        right:calc(9% + 34px)
-      }
-      .approach-list {
-        grid-template-columns:1fr
-      }
-      footer {
-        flex-direction:column;
-        gap:6px
-      }
-    }
-    
-    .project-photo {
-      display:block;
-      width:100%;
-      aspect-ratio:16/7;
-      object-fit:cover;
-      margin:17px 0 18px;
-      border:1px solid var(--line)
-    }
-    
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior:auto
-      }
-    }
-    
-  
-    /* Polished reading rhythm and photo interaction. */
-    h1,h2,h3 { text-wrap:balance }
-    p { text-wrap:pretty }
-    .project-info > p { max-width:52ch; line-height:1.7 }
-    .project-stock-photo { display:block; width:100%; aspect-ratio:16/9; margin:0 0 16px; border:1px solid var(--line); object-fit:cover; transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .35s }
-    .project:hover .project-stock-photo { transform:scale(1.015); filter:saturate(1.06) }
-    .project,.project-link,.masthead nav a,.menu-toggle { transition:transform .25s ease,color .2s ease,background-color .2s ease,border-color .2s ease }
-    .project:hover { transform:translateY(-3px) }
-    .project-link:hover { transform:translateX(3px) }
-    .button { border-radius:24px; transition:transform .2s ease,background-color .2s ease }
-    @media (prefers-reduced-motion: reduce) {
-      .project,.project-stock-photo,.project-link,.masthead nav a,.menu-toggle,.button { transition:none !important }
-      .project:hover,.project-link:hover,.project:hover .project-stock-photo { transform:none; filter:none }
-    }
+    @media (max-width: 560px) { .principles { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <header class="shell masthead">
-    <a class="wordmark" href="./">Small Business Sites / Portfolio</a>
-    <span class="masthead-note">Independent practice · HTML + CSS</span>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-    <nav id="site-navigation" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#approach">Approach</a></nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">S</span>Small Business Sites</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span>Menu</span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a class="btn btn-primary btn-sm" href="https://github.com/orondee/small-business-websites">View on GitHub ↗</a>
+      </nav>
+    </div>
   </header>
-  <main class="shell">
-    <section class="intro">
-      <div>
-        <p class="kicker">A small collection of web concepts</p>
-        <h1>Good work<br>deserves a <em>good site.</em></h1>
-      </div>
-      <div class="intro-side">
-        <p>I design and build clear, mobile-friendly websites for small businesses, with useful information and straightforward navigation on every screen.</p>
-        <p class="note">The two businesses below are fictional concept projects, not active companies or client work.</p>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell">
+        <div class="rise">
+          <p class="eyebrow pill-label">Web design portfolio</p>
+          <h1 class="display">Good work deserves<br>a <em>good website.</em></h1>
+        </div>
+        <div class="hero-side rise">
+          <p>I design and build clear, modern websites for small businesses — with useful information and simple navigation on every screen.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#work">See the work</a>
+            <a class="btn btn-outline" href="#approach">How I work</a>
+          </div>
+        </div>
       </div>
     </section>
-    <div class="section-label" id="projects-title"><span>Selected concepts / 01—02</span><span>Two different businesses, two different approaches</span></div>
-    <section class="projects" id="projects" aria-labelledby="projects-title">
-      <article class="project">
-        <a href="./greenline-lawn-care/" aria-label="View GreenLine Lawn Care demo">
-          <div class="preview lawn-preview">
-            <div class="preview-top"><span>GreenLine</span><span class="mini-label">Outdoor care</span></div>
-            <h2 class="preview-title">Room to<br>grow.</h2>
+
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-head" style="border-bottom:1px solid var(--line);padding-bottom:24px">
+        <h2 class="display" id="work-title">Selected concepts</h2>
+        <p class="muted" style="max-width:360px;font-size:.92rem">Two fictional businesses, two distinct approaches. These are concept projects, not active companies or client work.</p>
+      </div>
+      <div class="grid-2">
+        <a class="card project" href="./greenline-lawn-care/">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80" alt="Fresh green lawn in bright afternoon sunlight" width="1200" height="900" loading="lazy">
+            <span class="badge">Outdoor services</span>
+          </div>
+          <div class="card-body">
+            <p class="eyebrow">Project 01</p>
+            <h3>GreenLine Lawn Care</h3>
+            <p class="muted">A confident, friendly lawn-care brand built around deep greens, Manrope type, full-bleed photography and a clear path to a free estimate.</p>
+            <ul class="tags"><li>Service pages</li><li>Estimate form</li><li>Mobile-first</li></ul>
+            <span class="card-link">Open the demo ↗</span>
           </div>
         </a>
-        <div class="project-info">
-          <div class="project-meta"><span>PROJECT 01</span><span>Service business</span></div>
-          <h2>GreenLine Lawn Care</h2>
-          <p>A neighborhood lawn-care concept shaped by confident greens, Manrope typography, a custom CSS landscape, considered photography, and subtle motion that respects reduced-motion settings.</p>
-          <img class="project-photo" src="assets/lawn-scene.svg" alt="Illustration of a freshly maintained lawn beside a home" loading="eager">
-          <img class="project-stock-photo" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=82" alt="Sunlight across a green field at the start of the day" width="1200" height="800" loading="lazy" decoding="async">
-          <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
-          <a class="project-link" href="./greenline-lawn-care/">Explore the demo <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-      <article class="project">
-        <a href="./brightside-cleaning/" aria-label="View BrightSide Home Cleaning demo">
-          <div class="preview clean-preview">
-            <div class="preview-top"><span>BrightSide</span><span class="mini-label">Home cleaning</span></div>
-            <h2 class="preview-title">A fresh<br>start.</h2>
+        <a class="card project" href="./brightside-cleaning/">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Soft daylight filling a modern living space" width="1200" height="900" loading="lazy">
+            <span class="badge">Home services</span>
+          </div>
+          <div class="card-body">
+            <p class="eyebrow">Project 02</p>
+            <h3>BrightSide Home Cleaning</h3>
+            <p class="muted">A calm, editorial cleaning brand pairing DM Serif Display with DM Sans, soft terracotta and ink-blue details, and easy-to-compare services.</p>
+            <ul class="tags"><li>Editorial layout</li><li>Service menu</li><li>Mobile-first</li></ul>
+            <span class="card-link">Open the demo ↗</span>
           </div>
         </a>
-        <div class="project-info">
-          <div class="project-meta"><span>PROJECT 02</span><span>Home services</span></div>
-          <h2>BrightSide Home Cleaning</h2>
-          <p>A calmer, more editorial cleaning concept pairing DM Serif Display with DM Sans, soft terracotta and ink-blue details, a custom product illustration, considered home photography, and restrained motion.</p>
-          <img class="project-photo" src="assets/sunlit-room.svg" alt="Illustration of a bright, calm contemporary living space" loading="eager">
-          <img class="project-stock-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=82" alt="Warm, sunlit modern home interior" width="1200" height="800" loading="lazy" decoding="async">
-          <div class="tags"><span>HTML</span><span>CSS illustration</span><span>Responsive layout</span></div>
-          <a class="project-link" href="./brightside-cleaning/">Explore the demo <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+      </div>
     </section>
-    <section class="approach" id="approach">
-      <h2>What guides<br>each project.</h2>
-      <div class="approach-list">
-        <div class="approach-item"><b>Make the next step obvious</b><p>Organize each page around the questions a visitor is likely to have.</p></div>
-        <div class="approach-item"><b>Design for the actual business</b><p>Choose colors, type, and visual details that suit the service being shown.</p></div>
-        <div class="approach-item"><b>Keep it usable on mobile</b><p>Use flexible layouts, readable text, and navigation that fits smaller screens.</p></div>
-        <div class="approach-item"><b>Keep it easy to update</b><p>Use plain HTML and CSS so each page is straightforward to understand and maintain.</p></div>
+
+    <section class="section section-dark approach" id="approach" aria-labelledby="approach-title">
+      <div class="shell">
+        <div>
+          <p class="eyebrow" style="color:rgb(239 236 229 / 60%)">Approach</p>
+          <h2 class="display" id="approach-title">What guides each project.</h2>
+        </div>
+        <div class="principles">
+          <div><span class="num">01</span><b>Make the next step obvious</b><p class="muted">Every page is organized around the questions a visitor actually has.</p></div>
+          <div><span class="num">02</span><b>Design for the real business</b><p class="muted">Colors, type and imagery chosen to suit the service being offered.</p></div>
+          <div><span class="num">03</span><b>Great on every phone</b><p class="muted">Flexible layouts, readable text and navigation that fits small screens.</p></div>
+          <div><span class="num">04</span><b>Easy to keep up to date</b><p class="muted">Plain HTML and CSS that is straightforward to understand and maintain.</p></div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="shell"><span>Small business website concepts · Built with HTML and CSS · © <time data-current-year datetime="2026">2026</time></span><span class="demo-note">Portfolio demos only. Contact details and services are examples; no real business is represented.</span><nav aria-label="Sample websites"><a href="./greenline-lawn-care/">GreenLine sample</a><a href="./brightside-cleaning/">BrightSide sample</a></nav></footer>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNavigation = document.querySelector("#site-navigation");
-    menuToggle.addEventListener("click", () => {
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
-      siteNavigation.classList.toggle("is-open", !expanded);
-    });
-    document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && siteNavigation.classList.contains("is-open")) {
-      siteNavigation.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.focus();
-    }
-  });
-  siteNavigation.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        menuToggle.setAttribute("aria-expanded", "false");
-        siteNavigation.classList.remove("is-open");
-      }
-    });
-    document.querySelector("[data-current-year]").textContent = String(new Date().getFullYear());
-  </script>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <span>© <span data-current-year>2026</span> Small Business Sites</span>
+      <span>Portfolio demos only — no real business is represented.</span>
+      <nav aria-label="Sample websites">
+        <a href="./greenline-lawn-care/">GreenLine</a>
+        <a href="./brightside-cleaning/">BrightSide</a>
+        <a href="https://github.com/orondee/small-business-websites">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
 </body>
 </html>
