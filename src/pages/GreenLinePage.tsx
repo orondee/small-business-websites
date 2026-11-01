@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from '../hooks/useRouter';
+import { useRouter, LIVE_LINKS, copyToClipboard } from '../hooks/useRouter';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ViewportFrame } from '../components/ViewportFrame';
 
@@ -81,11 +81,21 @@ export function GreenLinePage() {
     estimatedQuote: string;
   } | null>(null);
 
+  const [copied, setCopied] = useState(false);
+
   useScrollReveal();
 
   useEffect(() => {
     document.title = 'GreenLine Lawn Care — A Lawn You Love Coming Home To';
   }, []);
+
+  const handleCopyLiveUrl = async () => {
+    const ok = await copyToClipboard(LIVE_LINKS.githubPagesGreenLine);
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
+  };
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -93,7 +103,6 @@ export function GreenLinePage() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      history.pushState(null, '', `#${id}`);
     }
   };
 
@@ -202,28 +211,82 @@ Please confirm crew availability for my neighborhood address.`;
               gap: '12px',
             }}
           >
-            <div>
-              <span>Portfolio Concept · GreenLine Lawn Care</span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px' }}>
               <button
                 type="button"
                 onClick={() => navigate('/')}
                 style={{
-                  background: 'none',
-                  border: 'none',
-                  color: 'var(--accent)',
+                  background: 'rgba(255, 255, 255, 0.12)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#ffffff',
                   fontWeight: 600,
-                  marginLeft: '8px',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
                   cursor: 'pointer',
-                  textDecoration: 'underline',
+                  fontSize: '0.78rem',
                 }}
               >
-                ← Back to Studio Hub
+                ← Back to Portfolio Hub
               </button>
+
+              <span style={{ fontWeight: 600, color: 'var(--accent)' }}>
+                GreenLine Lawn Care Demo
+              </span>
+
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  padding: '3px 8px',
+                  borderRadius: '6px',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.74rem' }}>Live:</span>
+                <code style={{ fontSize: '0.74rem', color: '#b7e4c7' }}>
+                  orondee.github.io/small-business-websites/#/greenline-lawn-care
+                </code>
+                <button
+                  type="button"
+                  onClick={handleCopyLiveUrl}
+                  style={{
+                    padding: '2px 8px',
+                    background: copied ? '#2d6a4f' : 'rgba(255, 255, 255, 0.15)',
+                    color: copied ? '#d8f3dc' : '#ffffff',
+                    border: 'none',
+                    borderRadius: '4px',
+                    fontSize: '0.72rem',
+                    cursor: 'pointer',
+                    fontWeight: 600,
+                  }}
+                >
+                  {copied ? '✓ Copied' : 'Copy'}
+                </button>
+              </div>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem' }}>
-                Preview Mode:
+              <a
+                href={LIVE_LINKS.githubPagesGreenLine}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: '#ffffff',
+                  fontSize: '0.76rem',
+                  textDecoration: 'none',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '4px 8px',
+                  borderRadius: '6px',
+                  fontWeight: 600,
+                }}
+              >
+                Open on github.io ↗
+              </a>
+              <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem' }}>|</span>
+              <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.76rem' }}>
+                Viewport:
               </span>
               <button
                 type="button"

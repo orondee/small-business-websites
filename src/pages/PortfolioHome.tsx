@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useRouter, ViewportMode } from '../hooks/useRouter';
+import { useRouter, ViewportMode, LIVE_LINKS, copyToClipboard } from '../hooks/useRouter';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { ProjectEstimator } from '../components/ProjectEstimator';
+import { LiveLinksBanner } from '../components/LiveLinksBanner';
 
 export function PortfolioHome() {
   const { navigate, setViewportMode, currentYear } = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<string | null>(null);
 
   useScrollReveal();
 
@@ -13,13 +15,20 @@ export function PortfolioHome() {
     document.title = 'Small Business Sites — Web Design & Conversion Studio';
   }, []);
 
+  const handleCopyLink = async (key: string, url: string) => {
+    const success = await copyToClipboard(url);
+    if (success) {
+      setCopyStatus(key);
+      setTimeout(() => setCopyStatus(null), 2500);
+    }
+  };
+
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      history.pushState(null, '', `#${id}`);
     }
   };
 
@@ -34,8 +43,12 @@ export function PortfolioHome() {
         Skip to content
       </a>
 
+      {/* Prominent Live GitHub Pages Deployment Header */}
+      <LiveLinksBanner />
+
       {/* Top Bar Contract: 3 zones, 1 line */}
       <header className="site-header">
+
         <div className="shell">
           {/* Zone 1: Brand wordmark */}
           <a
@@ -421,15 +434,56 @@ export function PortfolioHome() {
                   </button>
                 </div>
 
-                <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
+                <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <button
                     type="button"
                     className="btn btn-primary btn-sm"
                     onClick={() => launchConcept('/greenline-lawn-care', 'full')}
-                    style={{ width: '100%' }}
+                    style={{ width: '100%', justifyContent: 'center' }}
                   >
                     Launch Full GreenLine Experience →
                   </button>
+
+                  <div style={{ display: 'flex', gap: '6px', fontSize: '0.78rem' }}>
+                    <a
+                      href={LIVE_LINKS.githubPagesGreenLine}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        flex: 1,
+                        padding: '6px 10px',
+                        background: 'var(--card)',
+                        border: '1px solid var(--line)',
+                        borderRadius: '6px',
+                        color: 'var(--fg)',
+                        textDecoration: 'none',
+                        fontWeight: 600,
+                        textAlign: 'center',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '4px',
+                      }}
+                    >
+                      <span>github.io Demo</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyLink('card-greenline', LIVE_LINKS.githubPagesGreenLine)}
+                      style={{
+                        padding: '6px 12px',
+                        background: copyStatus === 'card-greenline' ? 'var(--ok)' : 'var(--soft)',
+                        color: copyStatus === 'card-greenline' ? '#ffffff' : 'var(--fg)',
+                        border: '1px solid var(--line)',
+                        borderRadius: '6px',
+                        cursor: 'pointer',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {copyStatus === 'card-greenline' ? '✓ Copied' : 'Copy URL'}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -533,15 +587,56 @@ export function PortfolioHome() {
                   </button>
                 </div>
 
-                <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
+                <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <button
                     type="button"
                     className="btn btn-accent btn-sm"
                     onClick={() => launchConcept('/brightside-cleaning', 'full')}
-                    style={{ width: '100%' }}
+                    style={{ width: '100%', justifyContent: 'center' }}
                   >
                     Launch Full BrightSide Experience →
                   </button>
+
+                  <div style={{ display: 'flex', gap: '6px', fontSize: '0.78rem' }}>
+                    <a
+                      href={LIVE_LINKS.githubPagesBrightSide}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        flex: 1,
+                        padding: '6px 10px',
+                        background: 'var(--card)',
+                        border: '1px solid var(--line)',
+                        borderRadius: '6px',
+                        color: 'var(--fg)',
+                        textDecoration: 'none',
+                        fontWeight: 600,
+                        textAlign: 'center',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '4px',
+                      }}
+                    >
+                      <span>github.io Demo</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyLink('card-brightside', LIVE_LINKS.githubPagesBrightSide)}
+                      style={{
+                        padding: '6px 12px',
+                        background: copyStatus === 'card-brightside' ? 'var(--ok)' : 'var(--soft)',
+                        color: copyStatus === 'card-brightside' ? '#ffffff' : 'var(--fg)',
+                        border: '1px solid var(--line)',
+                        borderRadius: '6px',
+                        cursor: 'pointer',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {copyStatus === 'card-brightside' ? '✓ Copied' : 'Copy URL'}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
