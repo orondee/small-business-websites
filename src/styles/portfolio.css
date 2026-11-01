@@ -1,0 +1,195 @@
+.portfolio-theme {
+  --bg: #f9f8f5;
+  --fg: #131714;
+  --card: #ffffff;
+  --muted: #5d665f;
+  --soft: #f0ece3;
+  --line: #ded8cb;
+  --primary: #1e2920;
+  --on-primary: #f9f8f5;
+  --accent: #b4532a;
+  --on-accent: #ffffff;
+  --surface: #1a241c;
+  --on-surface: #f4efe6;
+  --ok: #2b7a4b;
+  --error: #b42318;
+  --radius: 18px;
+  --font-body: "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-heading: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+.portfolio-hero {
+  padding: 100px 0 88px;
+  background: radial-gradient(110% 75% at 95% 5%, rgb(246 214 190 / 55%), transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 130%;
+  top: -15%;
+  right: -5%;
+  background: radial-gradient(circle, rgb(246 214 190 / 35%) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.portfolio-hero .shell {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero h1 {
+  font-size: clamp(3rem, 6.5vw, 5.25rem);
+  line-height: 1.02;
+  letter-spacing: -.03em;
+}
+
+.portfolio-hero h1 em {
+  color: var(--accent);
+  font-style: italic;
+  font-family: var(--font-heading);
+}
+
+.project {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  color: inherit;
+  border-radius: 24px;
+}
+
+.project .card-media {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  aspect-ratio: 16 / 10;
+}
+
+.project .card-media img {
+  transition: transform 1.2s cubic-bezier(.22,1,.36,1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project:hover .card-media img {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 94%);
+  font-size: .76rem;
+  font-weight: 700;
+  color: var(--primary);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  letter-spacing: 0.02em;
+}
+
+.project h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 2.2rem;
+  letter-spacing: -.02em;
+}
+
+.approach .shell {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / 10%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.principles div {
+  padding: 32px 28px;
+  background: var(--surface);
+  transition: background .3s ease;
+}
+
+.principles div:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+.principles b {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.principles .num {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.principles p {
+  color: color-mix(in srgb, var(--on-surface) 75%, transparent);
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+h2.display {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+@media (max-width: 960px) {
+  .portfolio-hero .shell,
+  .approach .shell,
+  .estimator-grid,
+  .calculator-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .portfolio-hero {
+    padding: 72px 0 60px;
+  }
+
+  .hero-visual-wrapper {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .principles {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-hero h1 {
+    font-size: 2.75rem;
+  }
+}

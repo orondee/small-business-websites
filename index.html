@@ -4,149 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Small Business Sites — Web Design Portfolio</title>
-  <meta name="description" content="Modern, mobile-friendly website concepts for small businesses: a lawn-care and a home-cleaning demo.">
+  <meta name="description" content="Modern, mobile-friendly website concepts for small service businesses: a lawn-care and a home-cleaning demo, rewritten in React.">
   <meta property="og:title" content="Small Business Sites — Web Design Portfolio">
-  <meta property="og:description" content="Two modern website concepts for small service businesses.">
+  <meta property="og:description" content="Modern, mobile-friendly website concepts for small service businesses: a lawn-care and a home-cleaning demo, rewritten in React.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=80">
   <meta name="theme-color" content="#f7f4ee">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2220%22 fill=%22%23232b24%22/%3E%3Ctext x=%2220%22 y=%2229%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2226%22 fill=%22white%22%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="assets/base.css">
-  <link rel="stylesheet" href="assets/polish.css">
-  <style>
-    .hero { padding: 120px 0 100px; background: radial-gradient(120% 80% at 100% 0%, rgb(246 214 190 / 60%), transparent 60%); position: relative; overflow: hidden; }
-    .hero::before { content: ""; position: absolute; width: 60%; height: 140%; top: -20%; right: -10%; background: radial-gradient(circle, rgb(246 214 190 / 40%) 0%, transparent 70%); pointer-events: none; }
-    .hero .shell { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; align-items: end; position: relative; z-index: 2; }
-    .pill-label { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); backdrop-filter: blur(8px); }
-    .pill-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-    .hero h1 { font-size: clamp(3.25rem, 8vw, 7rem); line-height: .95; letter-spacing: -.04em; }
-    .hero h1 em { color: var(--accent); font-style: italic; }
-    .hero-side p { margin-bottom: 24px; font-size: 1.15rem; color: var(--muted); line-height: 1.7; max-width: 420px; }
-    .project { text-decoration: none; position: relative; }
-    .project .card-media { position: relative; overflow: hidden; }
-    .project .card-media img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
-    .project:hover .card-media img { transform: scale(1.05); }
-    .badge { position: absolute; top: 16px; left: 16px; padding: 4px 12px; border-radius: 999px; background: rgb(255 255 255 / 92%); font-size: .78rem; font-weight: 600; color: var(--fg); backdrop-filter: blur(4px); border: 1px solid var(--line); }
-    .project h3 { font-family: var(--font-heading); font-weight: 400; font-size: 2.4rem; letter-spacing: -.02em; }
-    .project .eyebrow { margin: 0; color: var(--muted); font-size: .78rem; }
-    .approach .shell { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: start; }
-    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; overflow: hidden; border-radius: var(--radius); background: rgb(255 255 255 / 8%); border: 1px solid var(--line); }
-    .principles div { padding: 28px; background: var(--surface); transition: background .3s ease; }
-    .principles div:hover { background: rgb(255 255 255 / 6%); }
-    .principles b { display: block; margin-bottom: 6px; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 400; }
-    .principles .num { display: block; margin-bottom: 18px; color: var(--accent); font-family: var(--font-heading); font-size: 1.5rem; font-style: italic; }
-    .principles p { color: color-mix(in srgb, var(--on-surface) 70%, transparent); font-size: .92rem; line-height: 1.6; }
-    h2.display { font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.03em; }
-    .card-link { color: var(--accent); font-weight: 600; }
-    .card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
-    @media (max-width: 900px) {
-      .hero .shell, .approach .shell { grid-template-template-columns: 1fr; }
-      .hero { padding: 80px 0 72px; }
-      .hero::before { width: 100%; height: 100%; top: 0; right: 0; }
-    }
-    @media (max-width: 560px) { .principles { grid-template-columns: 1fr; } }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell">
-      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">S</span>Small Business Sites</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span>Menu</span></button>
-      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
-        <a class="btn btn-primary btn-sm" href="https://github.com/orondee/small-business-websites">View on GitHub ↗</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="shell">
-        <div class="rise reveal">
-          <p class="eyebrow pill-label">Web design portfolio</p>
-          <h1 class="display">Good work deserves<br>a <em>good website.</em></h1>
-        </div>
-        <div class="hero-side rise reveal">
-          <p>I design and build clear, modern websites for small businesses — with useful information and simple navigation on every screen.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="#work">See the work</a>
-            <a class="btn btn-outline" href="#approach">How I work</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section shell" id="work" aria-labelledby="work-title">
-      <div class="section-head" style="border-bottom:1px solid var(--line);padding-bottom:24px">
-        <h2 class="display" id="work-title">Selected concepts</h2>
-        <p class="muted" style="max-width:360px;font-size:.92rem;line-height:1.6">Two fictional businesses, two distinct approaches. These are concept projects, not active companies or client work.</p>
-      </div>
-      <div class="grid-2">
-        <a class="card project reveal" href="./greenline-lawn-care/">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80" alt="Fresh green lawn in bright afternoon sunlight" width="1200" height="900" loading="lazy">
-            <span class="badge">Outdoor services</span>
-          </div>
-          <div class="card-body">
-            <p class="eyebrow">Project 01</p>
-            <h3>GreenLine Lawn Care</h3>
-            <p class="muted">A confident, friendly lawn-care brand built around deep greens, Manrope type, full-bleed photography and a clear path to a free estimate.</p>
-            <ul class="tags"><li>Service pages</li><li>Estimate form</li><li>Mobile-first</li></ul>
-            <span class="card-link">Open the demo ↗</span>
-          </div>
-        </a>
-        <a class="card project reveal" href="./brightside-cleaning/">
-          <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Soft daylight filling a modern living space" width="1200" height="900" loading="lazy">
-            <span class="badge">Home services</span>
-          </div>
-          <div class="card-body">
-            <p class="eyebrow">Project 02</p>
-            <h3>BrightSide Home Cleaning</h3>
-            <p class="muted">A calm, editorial cleaning brand pairing DM Serif Display with DM Sans, soft terracotta and ink-blue details, and easy-to-compare services.</p>
-            <ul class="tags"><li>Editorial layout</li><li>Service menu</li><li>Mobile-first</li></ul>
-            <span class="card-link">Open the demo ↗</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section section-dark approach" id="approach" aria-labelledby="approach-title">
-      <div class="shell">
-        <div>
-          <p class="eyebrow" style="color:rgb(239 236 229 / 60%)">Approach</p>
-          <h2 class="display" id="approach-title">What guides each project.</h2>
-        </div>
-        <div class="principles reveal">
-          <div><span class="num">01</span><b>Make the next step obvious</b><p class="muted">Every page is organized around the questions a visitor actually has.</p></div>
-          <div><span class="num">02</span><b>Design for the real business</b><p class="muted">Colors, type and imagery chosen to suit the service being offered.</p></div>
-          <div><span class="num">03</span><b>Great on every phone</b><p class="muted">Flexible layouts, readable text and navigation that fits small screens.</p></div>
-          <div><span class="num">04</span><b>Easy to keep up to date</b><p class="muted">Plain HTML and CSS that is straightforward to understand and maintain.</p></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell">
-      <span>© <span data-current-year>2026</span> Small Business Sites</span>
-      <span>Portfolio demos only — no real business is represented.</span>
-      <nav aria-label="Sample websites">
-        <a href="./greenline-lawn-care/">GreenLine</a>
-        <a href="./brightside-cleaning/">BrightSide</a>
-        <a href="https://github.com/orondee/small-business-websites">GitHub</a>
-      </nav>
-    </div>
-  </footer>
-  <script src="assets/site.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

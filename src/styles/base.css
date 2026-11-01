@@ -1,6 +1,4 @@
-/* Shared styles for the portfolio and both sample sites.
-   Each page sets its own colors and fonts with the variables in :root
-   (portfolio) or in the site's own styles.css. */
+/* Shared styles for the portfolio and both sample sites. */
 :root {
   --bg: #f7f4ee;
   --fg: #1f2620;
@@ -55,6 +53,7 @@ p { margin: 0; }
   position: absolute; left: 1rem; top: -100px; z-index: 100;
   padding: 10px 16px; border-radius: 999px;
   background: var(--primary); color: var(--on-primary); text-decoration: none; font-weight: 600;
+  transition: top .2s ease;
 }
 .skip-link:focus { top: 1rem; }
 
@@ -62,6 +61,12 @@ p { margin: 0; }
 .demo-banner {
   padding: 8px 16px; text-align: center; font-size: .78rem;
   background: var(--surface); color: var(--on-surface);
+}
+.demo-banner a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 6px;
 }
 
 /* Header + navigation */
@@ -72,13 +77,13 @@ p { margin: 0; }
   border-bottom: 1px solid var(--line);
 }
 .site-header .shell { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -.01em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -.01em; cursor: pointer; }
 .brand-mark {
   display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
   background: var(--primary); color: var(--on-primary); font-family: var(--font-heading); font-size: 1.1rem;
 }
 .site-nav { display: flex; align-items: center; gap: 30px; }
-.site-nav a:not(.btn) { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; }
+.site-nav a:not(.btn) { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; cursor: pointer; }
 .site-nav a:not(.btn):hover { color: var(--fg); }
 .menu-toggle {
   display: none; align-items: center; gap: 8px; padding: 8px 14px;
@@ -128,7 +133,7 @@ p { margin: 0; }
 .site-footer { border-top: 1px solid var(--line); }
 .site-footer .shell { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; padding: 36px 0; font-size: .88rem; color: var(--muted); }
 .site-footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
-.site-footer a { text-decoration: none; }
+.site-footer a { text-decoration: none; cursor: pointer; }
 .site-footer a:hover { color: var(--fg); }
 
 /* Forms */
@@ -141,7 +146,7 @@ p { margin: 0; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
 .field [aria-invalid="true"] { border-color: var(--error); }
 .field-error { margin-top: 6px; color: var(--error); font-size: .85rem; }
-.form-status { margin-top: 14px; font-weight: 600; color: var(--ok); }
+.form-status { margin-top: 14px; font-weight: 600; color: var(--ok); line-height: 1.5; }
 
 /* Entrance motion */
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -157,6 +162,7 @@ p { margin: 0; }
     position: absolute; top: 64px; left: 0; right: 0; display: none;
     flex-direction: column; align-items: stretch; gap: 0; padding: 8px 1.5rem 20px;
     background: var(--bg); border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
   }
   .site-nav.is-open { display: flex; }
   .site-nav a:not(.btn) { padding: 14px 0; font-size: 1rem; color: var(--fg); border-bottom: 1px solid var(--line); }
